@@ -25,17 +25,17 @@ Aunque parte del contenido está orientado al **autoentrenamiento**, también es
 partitura-linux/
 ├── 00-instalaciones/
 │   └── -_historia.md
-    └── -_uso_de_Linux.md
+│   └── -_uso_de_Linux.md
 │   └── 0_ventoy.md
-    └── 1_kde-neon.md
+│   └── 1_kde-neon.md
 │   └── 2_kali-live.md
-    └── 3_tails.md
+│   └── 3_tails.md
 │   └── 4_debian-live.md
-    └── 5_parrot.md
+│   └── 5_parrot.md
 │   └── 6_gparted.md
-    └── 7_rescatux.md
+│   └── 7_rescatux.md
 │   └── 8_fedora.md
-    └── 9_manjaro.md                   
+│   └── 9_manjaro.md                   
 ├── 01-terminal/
 │   ├── comandos-esenciales.md
 │   └── alias-utiles.md
