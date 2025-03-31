@@ -35,8 +35,6 @@ Ventoy permite:
 
 ---
 
----
-
 ## 💽 Requisitos
 
 - USB de al menos 32–64 GB (recomendado USB 3.0)
@@ -106,10 +104,6 @@ sudo ./Ventoy2Disk.sh -i /dev/sdX
 4. En la terminal del LiveCD:
   
 
-bash
-
-CopyEdit
-
 `sudo ./Ventoy2Disk.sh -i /dev/diskX`
 
 > Alternativa para usuarios avanzados: compilar desde Homebrew
@@ -155,9 +149,8 @@ Es una **infraestructura portátil para despliegue ético, temporal y seguro**.
 
 > *Donde no hay raíz… tampoco hay rastro.*
 
-🌐 Enlaces útiles
-Página oficial: [https://www.ventoy.net/](https://www.ventoy.net/)
+## 🌐 Enlaces útiles
 
-GitHub: [GitHub - ventoy/Ventoy: A new bootable USB solution.](https://github.com/ventoy/Ventoy)
-
-Lista de ISOs compatibles: [test list . Ventoy](https://www.ventoy.net/en/isolist.html)
+- Página oficial: [https://www.ventoy.net](https://www.ventoy.net/)
+- GitHub: [https://github.com/ventoy/Ventoy](https://github.com/ventoy/Ventoy)
+- Lista de ISOs compatibles: [https://www.ventoy.net/en/isolist.html](https://www.ventoy.net/en/isolist.html)
