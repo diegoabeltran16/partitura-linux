@@ -1,18 +1,18 @@
 ## 📜 *La instalación como decisión: razones, caminos y propósito en el uso de Linux*
 
-> *"No se instala un sistema operativo. Se planta una semilla."*
+> *"No se instala un sistema. Se planta una semilla."*
 
 Instalar Linux no es un proceso técnico más. No es simplemente reemplazar un sistema, ni copiar una imagen.  
-**Es una decisión. Un movimiento estratégico, y muchas veces, filosófico.**
+Es una decisión. Un movimiento estratégico, y muchas veces, filosófico.
 
-En un mundo digital sobrecargado por interfaces controladas, actualizaciones forzadas y rastreos invisibles, **Linux se presenta como una respuesta.**  
+En un mundo digital **sobrecargado** por interfaces controladas, actualizaciones forzadas y rastreos invisibles, **Linux se presento como una busqueda de juego, construccion, aprendizaje y entendimiento.**  
 No una moda, ni una herramienta para expertos solamente, sino una alternativa viable, ética y poderosa para quienes buscan recuperar control sobre su entorno digital.
 
 # Instalación de sistemas Linux: enfoques, niveles y criterios técnicos
 
-La instalación de un sistema Linux no debe interpretarse como un simple procedimiento de copia o ejecución de comandos. Es, una **decisión arquitectónica**, que determina la forma en la que un usuario o profesional interactuará con el hardware, el software y los datos.
+La instalación de un sistema Linux no debe interpretarse como un simple procedimiento de copia o ejecución de comandos. Es, una **decisión moral y etica arquitectónica**, que determina la forma en la que un usuario o profesional interactuará con el hardware, el software y los datos.
 
-En este documento se describen los distintos tipos de instalación, los contextos en los que son aplicables, y las razones técnicas y operativas que justifican su elección. Todo enmarcado dentro de un enfoque **portable, seguro y éticamente responsable** del uso de tecnologías **libres**.
+En este repositorio se describen los distintos tipos de instalación, los contextos en los que son aplicables, y las razones técnicas y operativas que justifican su elección. Todo enmarcado dentro de un enfoque **portable, seguro y éticamente responsable** del uso de tecnologías **libres**.
 
 ---
 
@@ -57,18 +57,7 @@ Todo sin comprometer el equipo anfitrión ni la integridad del sistema operativo
 
 ---
 
-## 4. Sobre el concepto de “instalamiento”
-
-En este proyecto se hace uso de una expresión complementaria: **instalamiento**.  
-Aunque no es un término técnico estándar, su uso en este contexto busca denotar una acción más amplia que la simple instalación.
-
-> Instalamiento: *Acción de desplegar y ejecutar un sistema Linux con intención funcional, sin la necesidad de modificar permanentemente el entorno físico.*
-
-Esto puede implicar la carga temporal en memoria (RAM), la ejecución desde USB, o el uso de sistemas efímeros diseñados para no dejar rastro.
-
----
-
-## 5. Consideraciones éticas y operativas
+#### 4. Consideraciones éticas y operativas
 
 En entornos donde se prioriza la privacidad, el anonimato o la no persistencia, es fundamental aplicar criterios técnicos rigurosos:
 
