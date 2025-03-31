@@ -5,7 +5,7 @@
 Instalar Linux no es un proceso técnico más. No es simplemente reemplazar un sistema, ni copiar una imagen.  
 Es una decisión. Un movimiento estratégico, y muchas veces, filosófico.
 
-En un mundo digital **sobrecargado** por interfaces controladas, actualizaciones forzadas y rastreos invisibles, **Linux se presento como una busqueda de juego, construccion, aprendizaje y entendimiento.**  
+En un mundo digital **sobrecargado** por interfaces controladas, actualizaciones forzadas y rastreos invisibles, **Linux se presentó como una decisión arquitectónica con implicaciones morales y éticas**  
 No una moda, ni una herramienta para expertos solamente, sino una alternativa viable, ética y poderosa para quienes buscan recuperar control sobre su entorno digital.
 
 # Instalación de sistemas Linux: enfoques, niveles y criterios técnicos
@@ -67,6 +67,13 @@ En entornos donde se prioriza la privacidad, el anonimato o la no persistencia, 
 - Comprensión del alcance y limitaciones de cada sistema
 
 Este repositorio fue diseñado para documentar dichos procesos y decisiones, brindando un enfoque técnico claro y replicable.
+
+#### **¿A quién está dirigido este documento?”**
+
+- Técnicos en formación
+- Profesionales de sistemas
+- Usuarios migrando de otros sistemas
+- Personas interesadas en la privacidad y el software libre
 
 ---
 
