@@ -86,4 +86,4 @@ Este repositorio fue diseñado para documentar dichos procesos y decisiones, bri
 
 ---
 
-> *Nota: algunos fragmentos de este repositorio utilizan lenguaje artistico o simbólico como recurso narrativo complementario. Sin embargo, la estructura, los comandos y los procedimientos siguen estándares técnicos verificables.*
+> *Nota: algunos fragmentos de este repositorio utilizan lenguaje artístico o simbólico como recurso narrativo complementario. Sin embargo, la estructura, los comandos y los procedimientos siguen estándares técnicos verificables y replicables en entornos reales.*
