@@ -57,7 +57,7 @@ Todo sin comprometer el equipo anfitrión ni la integridad del sistema operativo
 
 ---
 
-#### 4. Consideraciones éticas y operativas
+## 4. Consideraciones éticas y operativas
 
 En entornos donde se prioriza la privacidad, el anonimato o la no persistencia, es fundamental aplicar criterios técnicos rigurosos:
 
@@ -68,7 +68,7 @@ En entornos donde se prioriza la privacidad, el anonimato o la no persistencia, 
 
 Este repositorio fue diseñado para documentar dichos procesos y decisiones, brindando un enfoque técnico claro y replicable.
 
-#### **¿A quién está dirigido este documento?”**
+## **¿A quién está dirigido este documento?”**
 
 - Técnicos en formación
 - Profesionales de sistemas
