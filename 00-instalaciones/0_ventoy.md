@@ -43,36 +43,112 @@ Ventoy permite:
 - Precaución: el proceso de instalación de Ventoy borra la unidad USB
 
 ---
+## 🐧 Instalación de Ventoy en Linux (ejemplo: Debian)
 
-# 🐧 Instalación en Linux (ej: Debian)
+Esta guía explica cómo instalar Ventoy de forma segura en una unidad USB desde un sistema Linux.
+
+El procedimiento **reemplazará todo el contenido de la unidad**, así que asegúrate de usar una USB adecuada y respaldar su contenido si es necesario.
+
+
+### 📦 Paso 1: Crear carpeta de trabajo
 
 ```bash
-# 1. Crear carpeta de trabajo
 mkdir ~/ventoy && cd ~/ventoy
+```
 
-# 2. Descargar Ventoy (ejemplo versión)
+Esto crea un entorno controlado para guardar la descarga, descomprimir el archivo y ejecutar la instalación.
+
+---
+
+### 🌐 Paso 2: Descargar la última versión de Ventoy
+
+```bash
 wget https://github.com/ventoy/Ventoy/releases/download/v1.1.05/ventoy-1.1.05-linux.tar.gz
+```
 
-# 3. Verificar la integridad (opcional pero recomendado)
-echo "hash esperado  ventoy-x.x.xx-linux.tar.gz" > sha256.txt
-sha256sum -c sha256.txt
+⚠️ *Reemplazá la URL por la versión más reciente desde el repositorio oficial de GitHub:
+👉 https://github.com/ventoy/Ventoy/releases*
 
-# 4. Extraer el archivo
-tar -xzf ventoy-1.1.05-linux.tar.gz && cd ventoy-1.1.05
+---
 
-# 5. Identificar tu USB
+### 🔐 Paso 3: Verificar la integridad de la descarga (opcional pero recomendado)
+
+```bash
+sha256sum ventoy-1.1.05-linux.tar.gz
+```
+
+Compará el resultado con el hash publicado en la web oficial o en el archivo `sha256.txt` del proyecto.
+
+Esto asegura que el archivo **no fue alterado** durante la descarga (ataques MITM o errores de red).
+
+---
+
+### 📂 Paso 4: Extraer el archivo descargado
+
+```bash
+tar -xzf ventoy-1.1.05-linux.tar.gz
+cd ventoy-1.1.05
+```
+
+Extrae el contenido y accede a la carpeta donde está el script de instalación.
+
+---
+
+### 💽 Paso 5: Identificar correctamente tu unidad USB
+
+```bash
 lsblk
-# Ejemplo: /dev/sdX
+```
 
-# 6. Desmontar particiones montadas
-sudo umount /dev/sdX1 /dev/sdX2
-
-# 7. Instalar Ventoy en el dispositivo
-sudo ./Ventoy2Disk.sh -i /dev/sdX
-⚠️ Asegúrate de elegir el dispositivo correcto. Ventoy borrará todos los datos previos.
-
+Buscá en la salida algo como:
 
 ```
+sda    58.6G
+├─sda1 ...
+└─sda2 ...
+
+```
+
+**⚠️ Asegurate de identificar el dispositivo correcto (por ejemplo, `/dev/sda` o `/dev/sdb`).**
+
+No te confundas con el disco duro principal del sistema, ya que el siguiente paso **borrará todo** en la unidad seleccionada.
+
+---
+
+### 🧼 Paso 6: Desmontar particiones montadas de la unidad USB
+
+```bash
+sudo umount /dev/sdX1 /dev/sdX2
+```
+
+Reemplazá `sdX` por la letra correspondiente a tu USB.
+
+Este paso es obligatorio si la unidad fue montada automáticamente.
+
+---
+
+### 🚀 Paso 7: Instalar Ventoy en la unidad
+
+```bash
+sudo ./Ventoy2Disk.sh -i /dev/sdX
+```
+
+⚠️ **Este paso eliminará todo el contenido previo** en la unidad seleccionada.
+
+Si todo va bien, verás un mensaje de instalación exitosa.
+
+A partir de ahora, la unidad se llamará “Ventoy” y podrá usarse como disco multiboot.
+
+---
+
+### ✅ Resultado esperado
+
+Tu USB ahora tendrá dos particiones:
+
+- Una visible llamada `Ventoy` donde podrás copiar archivos `.iso`
+- Otra reservada para el gestor de arranque
+
+---
 
 ## 🪟 Instalación en Windows
 
@@ -124,6 +200,34 @@ sudo ./Ventoy2Disk.sh -i /dev/sdX
   
 
 ---
+## ⚠️ Problemas comunes al arrancar distros con Ventoy
+
+### 🧅 Tails (y otras distros con requerimientos especiales)
+
+Tails tiene algunas restricciones con **UEFI** y **Secure Boot** que pueden causar errores como:
+
+```
+No bootfile found for UEFI
+Maybe the image does not support x64 UEFI
+
+```
+
+### 💡 Soluciones posibles:
+
+- Verificá que usás la **imagen `.img` oficial para USB**, no la `.iso` de DVD (Tails diferencia entre ambas).
+- Intentá arrancar en **modo Legacy BIOS** si tu equipo lo permite.
+- En algunos casos, **Ventoy no es compatible con Tails directamente.**
+Se recomienda:
+    - Usar **balenaEtcher** o el **Tails Installer**
+    - O cargarla desde otro USB externo si necesitás iniciar desde otro sistema
+
+### 🔁 Alternativa:
+
+Usar Tails en un USB aparte, dedicado, fuera de Ventoy, para garantizar su funcionamiento y evitar conflictos con UEFI/Secure Boot.
+
+> Tails es como un ninja solitario. Necesita su propio campo.
+No se lleva bien con pergaminos multiboot sin disciplina previa. 😅
+>
 
 ## 💡 Tips adicionales
 
