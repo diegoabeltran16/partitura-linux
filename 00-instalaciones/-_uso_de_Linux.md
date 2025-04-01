@@ -87,3 +87,27 @@ Este repositorio fue diseñado para documentar dichos procesos y decisiones, bri
 ---
 
 > *Nota: algunos fragmentos de este repositorio utilizan lenguaje artístico o simbólico como recurso narrativo complementario. Sin embargo, la estructura, los comandos y los procedimientos siguen estándares técnicos verificables y replicables en entornos reales.*
+>
+> ## primeros comandos esenciales
+
+> “Un sistema recién instalado es como una espada nueva:
+requiere cuidado, y saber cómo blandirla.”
+> 
+
+Los siguientes comandos son suficientes para:
+
+- Verificar tu entorno
+- Navegar la estructura del sistema
+- Ejecutar acciones simples con control
+
+```bash
+whoami         # Saber con qué usuario estás trabajando
+ls             # Ver contenido del directorio actual
+cd ..          # Subir un nivel
+pwd            # Mostrar ruta actual
+df -h          # Ver espacio disponible en disco
+free -h        # Ver uso de memoria RAM
+uname -a       # Ver información del kernel
+```
+Para una referencia completa, consultá el archivo:
+📁 00-instalaciones/comandos.md
