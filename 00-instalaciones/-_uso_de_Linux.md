@@ -109,5 +109,6 @@ df -h          # Ver espacio disponible en disco
 free -h        # Ver uso de memoria RAM
 uname -a       # Ver información del kernel
 ```
-Para una referencia completa, consultá el archivo:
-📁 00-instalaciones/comandos.md
+
+> Para una referencia completa, consultá el archivo:  
+> 📁 [`00-instalaciones/_comandos.md`](../00-instalaciones/_comandos.md)
