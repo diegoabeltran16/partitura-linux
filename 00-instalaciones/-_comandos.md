@@ -297,127 +297,454 @@ lsblk
 
 # 🔐 Usuario, permisos y superpoderes
 
-## Muestra tu UID y grupos
-```bash
-id                  
-```
-## A qué grupos pertenecés
-```bash
-groups              
-```
-## Ejecutar con privilegios
-```bash
-sudo comando        
-```
-## Cambiar tu contraseña
-```bash
-passwd              
-```
-## Hacer ejecutable un script
-```bash
-chmod +x archivo.sh 
-```
+En Linux, **todo está gobernado por usuarios y permisos**.
+No hay GUI ni efecto visual que te salve si no sabés cómo funciona el sistema de privilegios.
+Cada acción está atada a una identidad, y cada identidad tiene un rango de poder.
 
 ---
 
+## 🆔 `id` – **Muestra tu UID y grupos**
+
+```bash
+id
+```
+📎 Muestra tu ID de usuario (`uid`), grupo principal (`gid`) y grupos secundarios.
+🔸 Es útil para entender con qué permisos te estás moviendo y qué recursos podés acceder.
+> 📜 Hasta el ninja más sigiloso deja una firma. Saber quién sos en el sistema es clave para no pisar una trampa.
+> 
+
+---
+
+## 🧪 `groups` – **A qué grupos pertenecés**
+
+```bash
+groups
+```
+📎 Lista los grupos a los que pertenecés.
+🔸 En Linux, los permisos también se asignan por grupo. Si sos parte de `sudo`, tenés acceso a superpoderes 🥷⚡.
+> 🔓 Los grupos son como clanes: te otorgan habilidades especiales según tu afiliación.
+> 
+
+---
+
+## 🔑 `sudo comando` – **Ejecutar con privilegios**
+
+```bash
+sudo comando
+```
+
+📎 Ejecuta un comando como **root** (el usuario con poder absoluto).
+🔸 Usá `sudo` cuando necesites instalar software, modificar configuraciones críticas, o cambiar permisos avanzados.
+> ⚠️ Un ninja sabio no invoca poder sin necesidad. Cada sudo debe ser meditado.
+> 
+
+---
+
+## 🔐 `passwd` – **Cambiar tu contraseña**
+
+```bash
+passwd
+```
+📎 Te permite modificar tu contraseña actual.
+🔸 Si sos root o usás `sudo passwd usuario`, podés cambiar la de otros.
+> 🗝️ Un ninja protege su identidad. La contraseña es tu sello personal.
+> 
+
+---
+
+## ⚔️ `chmod +x archivo.sh` – **Hacer ejecutable un script**
+```bash
+chmod +x archivo.sh
+```
+
+📎 Cambia los permisos de un archivo para que pueda ser ejecutado (`+x` significa “eXecutable”).
+🔸 Esencial al crear scripts personalizados o herramientas propias.
+> 🛡️ Los permisos son como sellos de invocación. Si no están firmados, no se activan.
+> 
+
+---
+
+### 🧘‍♂️ Reflexión táctica:
+
+El sistema de permisos en Linux tiene tres niveles:
+🔹 **Usuario** (u)
+🔹 **Grupo** (g)
+🔹 **Otros** (o)
+Y tres tipos de acceso:
+🔸 **Lectura** (r)
+🔸 **Escritura** (w)
+🔸 **Ejecución** (x)
+
+Cada archivo tiene una “matriz” de protección que se ve con `ls -l`:
+
+```
+-rwxr-xr--
+```
+> Dominar los permisos es como aprender a sellar puertas: sabrás quién entra, quién mira y quién actúa.
+> 
+
+---
 # 📁 Archivos y edición
 
-## Ver contenido
-```bash
-cat archivo.txt        
-```
+## 🧱 Fundamentos
 
-## Editar en modo terminal
-```bash
-nano archivo.txt       
-```
-
-## Copiar archivo o carpeta
-```bash
-cp origen destino      
-```
-
-## Mover o renombrar
-```bash
-mv origen destino      
-```
-
-## Eliminar archivo
-```bash
-rm archivo.txt         
-```
-
-## Crear carpeta
-```bash
-mkdir nueva/           
-```
-
-## Crear archivo vacío
-```bash
-touch nuevo.txt        
-```
+En Linux, los archivos son **el corazón del sistema**: todo es un archivo, desde configuraciones hasta procesos.
+Saber crearlos, moverlos o destruirlos es parte de tu entrenamiento esencial.
 
 ---
 
+## 📖 `cat archivo.txt` – **Ver contenido**
+
+```bash
+cat archivo.txt
+```
+📎 *Concatenate / Mostrar*
+🔸 Muestra el contenido de un archivo en pantalla.
+🔹 También se usa para combinar archivos: `cat archivo1 archivo2 > nuevo.txt`
+> 👁️ La lectura es el primer paso del entendimiento. Mirá antes de actuar.
+> 
+
+---
+
+## 📝 `nano archivo.txt` – **Editar en modo terminal**
+
+```bash
+nano archivo.txt
+```
+📎 Editor de texto ligero en la terminal.
+🔸 Ideal para configurar scripts, editar archivos `.conf` o tomar notas rápidas.
+> 🖋️ Un ninja también escribe: sin dejar rastro, pero dejando huella.
+> 
+> 🧠 Guardar: Ctrl + O, salir: Ctrl + X
+> 
+
+---
+
+## 🧬 `cp origen destino` – **Copiar archivo o carpeta**
+
+```bash
+cp archivo.txt copia.txt
+cp -r carpeta1/ carpeta2/
+```
+📎 *Copy*
+🔸 Copia archivos o carpetas (`-r` para recursivo).
+🔹 Esencial para hacer backups, duplicar configuraciones o preparar entornos.
+> 🧪 Cada copia es un reflejo. A veces el reflejo se vuelve arma.
+> 
+
+---
+
+## 🎭 `mv origen destino` – **Mover o renombrar**
+
+```bash
+mv archivo.txt /otra/ruta/
+mv viejo.txt nuevo.txt
+```
+
+📎 *Move*
+🔸 Mueve un archivo/carpeta o lo renombra si el destino es un nombre.
+> 🥷 Desaparecer de un lugar y aparecer en otro. Sin dejar rastro.
+> 
+
+---
+
+## ☠️ `rm archivo.txt` – **Eliminar archivo**
+
+```bash
+rm archivo.txt
+rm -r carpeta/
+```
+📎 *Remove*
+🔸 Borra archivos permanentemente. Usa `-r` para carpetas.
+⚠️ ¡No hay papelera! Precaución con `sudo` o `rm -rf`.
+> 🔥 Eliminar es parte del camino. Pero solo el sabio sabe cuándo destruir.
+> 
+
+---
+
+## 🏗️ `mkdir nueva/` – **Crear carpeta**
+
+```bash
+mkdir nueva/
+```
+📎 *Make Directory*
+🔸 Crea una nueva carpeta.
+🔹 Podés crear varias o anidadas con `mkdir -p ruta/otra/mas/`
+> 🏯 El ninja construye su refugio antes de entrar en batalla.
+> 
+
+---
+
+## ✨ `touch nuevo.txt` – **Crear archivo vacío**
+
+```bash
+touch nuevo.txt
+```
+📎 *Toca* un archivo: lo crea si no existe, o actualiza su fecha si ya existe.
+🔸 Muy útil para generar archivos rápidos o iniciar registros.
+> 📜 Todo empieza con una hoja en blanco. Touch es el primer golpe del pincel.
+> 
+
+---
+
+### 🎯 Sugerencia de práctica:
+
+```bash
+mkdir NOMBRECARPETA/
+cd NOMBRECARPETA
+touch nota.txt
+echo "No hay raíz..." > nota.txt
+cat nota.txt
+mv nota.txt pergamino.txt
+nano pergamino.txt
+
+```
+
+> Así entendés cómo crear, escribir, renombrar y leer... sin GUI, solo con tu terminal y tu chakra.
+> 
+
+---
 # 📦 Paquetes y actualizaciones
 
-## Actualizar lista de paquetes (Debian/Ubuntu)
+> 🧠 Un sistema sin actualizaciones es como una katana sin afilar.
+> 
+
+## 📦 ¿Qué son los paquetes?
+
+Un **paquete** es como una caja que contiene software.
+Dentro puede haber:
+- Un programa
+- Archivos de configuración
+- Librerías necesarias
+- Scripts de instalación
+👉 En Debian (y derivadas como Ubuntu), estos paquetes terminan en `.deb`.
+Cuando instalás algo con `sudo apt install`, estás diciéndole a tu sistema:
+> “Traé esta caja del almacén oficial y desempaquetala en el sistema”.
+> 
+
+### 📚 ¿Dónde están esos paquetes?
+Vienen desde **repositorios**, que son servidores confiables llenos de herramientas.
+
+Cuando ejecutás:
 ```bash
-sudo apt update             
+sudo apt update
+```
+Le estás diciendo a tu sistema:
+> “Consultá al dojo central si hay nuevas técnicas disponibles”.
+> 
+Y con:
+```bash
+sudo apt upgrade
+```
+> “Entrená todas las técnicas instaladas a su última versión segura.”
+> 
+
+---
+
+### 🧙‍♂️ ¿Por qué importa?
+
+Actualizar tus paquetes:
+- Corrige **vulnerabilidades** (seguridad)
+- Mejora rendimiento o estabilidad
+- Te da acceso a **nuevas funciones**
+
+Y lo mejor: lo hacés con **2 comandos**.
+
+No necesitás un “Windows Update” con reinicios infinitos.
+
+| Concepto | Qué es | Para qué sirve |
+| --- | --- | --- |
+| `paquete` | Caja con software | Instalar programas |
+| `repositorio` | Almacén remoto | Fuente confiable de paquetes |
+| `apt update` | Consulta a los repos | Ver si hay novedades |
+| `apt upgrade` | Entrena las técnicas | Actualiza lo que ya tenés |
+---
+
+## 🔄 `sudo apt update` – **Actualizar lista de paquetes**
+
+```bash
+sudo apt update
+```
+📎 Refresca el índice de los repositorios: le dice al sistema cuáles versiones están disponibles.
+🔸 No instala nada, solo actualiza la “lista de compras”.
+> 🧭 Antes de moverte, revisá el mapa. Este comando sincroniza tu sistema con el dojo central.
+> 
+
+---
+
+## 🧪 `sudo apt upgrade` – **Actualizar los paquetes instalados**
+
+```bash
+sudo apt upgrade
+```
+📎 Instala las nuevas versiones de los paquetes que ya tenés.
+🔸 Ideal hacerlo después de `apt update`.
+🔹 Para actualizar todo sin preguntas: `sudo apt upgrade -y`
+> ⚔️ Actualizar es entrenar a tus herramientas. Las versiones viejas son armas oxidadas.
+> 
+
+---
+
+## 🛠️ `sudo apt install nombre` – **Instalar un paquete**
+
+```bash
+sudo apt install nombre
+```
+📎 Descarga e instala programas desde los repositorios oficiales.
+🔸 Ejemplo: `sudo apt install neofetch`
+> 🎒 Cada herramienta es una técnica. Elegí bien qué cargás en tu mochila.
+> 
+
+---
+
+## 🧹 `sudo apt remove nombre` – **Eliminar un paquete**
+
+```bash
+sudo apt remove nombre
 ```
 
-## Actualizar los paquetes instalados
-```bash
-sudo apt upgrade            
-```
-
-## Instalar un paquete
-```bash
-sudo apt install nombre     
-```
-
-## Eliminar un paquete
-```bash
-sudo apt remove nombre      
-```
+📎 Elimina un programa, pero puede dejar archivos de configuración.
+🔹 Para limpieza profunda: `sudo apt purge nombre`
+> 🧼 Eliminar lo que no usás es parte del arte del sigilo. El ninja no carga peso innecesario.
+> 
 
 ---
 
 # 🔄 Procesos y recursos
 
-## Listar procesos en ejecución
+> Un ninja no solo observa el sistema… lo escucha, lo siente, lo vigila desde dentro.
+> 
+
+## 🔄 ¿Qué son los procesos?
+
+Un **proceso** es un programa en ejecución.
+Por ejemplo:
+- Si abrís Firefox → hay un proceso corriendo
+- Si corrés un script → se vuelve proceso
+- Incluso cosas invisibles (como el servidor de red) son procesos
+
+Podés verlos con:
+## 👁️ `ps aux` – **Listar procesos en ejecución**
+
 ```bash
-ps aux                 
+ps aux
 ```
 
-## Vista en tiempo real (o usar htop)
+📎 Muestra todos los procesos activos: usuario, PID, uso de CPU/RAM, comandos.
+🔸 Ideal para saber qué está corriendo detrás de escena.
+> 🧙 El arte de ver sin ser visto. Saber quién actúa es saber a quién detener.
+> 
+
+---
+
+## 🌡️ `top` – **Vista en tiempo real del sistema**
+
 ```bash
-top                    
+top
 ```
 
-## Terminar proceso (PID = número del proceso)
+📎 Muestra una interfaz en vivo de procesos, CPU, RAM, uso de swap…
+🔹 Alternativa más amigable: `htop` (requiere instalación)
+> 🧭 Es tu radar ninja: ves todo lo que respira dentro del sistema.
+> 
+
+---
+
+## ☠️ `kill PID` – **Terminar proceso**
+
 ```bash
-kill PID               
+kill 1234
+```
+📎 Finaliza un proceso usando su ID (PID). Usá `ps aux` o `top` para encontrarlo.
+🔹 Para forzar: `kill -9 PID`
+> 💀 A veces, una técnica se descontrola. Este comando la sella.
+> 
+
+---
+
+### 🌀 Extra: combo ninja
+
+```bash
+ps aux | grep firefox
+kill PID
 ```
 
+🔸 Filtra procesos por nombre y elimina el que quieras.
+> 🕶️ Identificá, apunta, elimina. Precisión en cada línea.
+>
 ---
 
 # 🌐 Red y conectividad
 
-## Ver interfaces de red
+En Linux, entender la red es como leer el viento en el campo de batalla: **sutil, constante y vital**.
+
+## 📡 `ip a` – **Ver interfaces de red**
+
 ```bash
-ip a                   
+ip a
 ```
 
-## Probar conexión a internet
+📎 Muestra todas las interfaces de red del sistema:
+- Direcciones IP
+- Estado de conexión (UP/DOWN)
+- Interfaces como `eth0`, `wlan0`, `lo`, etc.
+
+🔸 Ideal para:
+- Ver si tu equipo tiene IP asignada
+- Diagnosticar problemas de conexión
+- Saber si estás usando cable, WiFi o VPN
+
+> 🧙‍♂️ Este comando reemplaza al antiguo ifconfig. Más preciso, más completo.
+> 
+
+---
+
+## 📶 `ping` – **Probar conexión a internet**
+
 ```bash
-ping google.com        
+ping google.com
 ```
 
-## Ver tu IP pública
+📎 Envía paquetes al destino y mide el tiempo de respuesta.
+- Si ves respuestas → estás en línea.
+- Si no hay respuesta → hay problema de red.
+
+🔸 Útil para:
+- Verificar si tenés conexión
+- Medir latencia
+- Diagnosticar caídas o bloqueos de DNS
+
+> 🥷 Ping es el "eco" del ninja: si vuelve, el camino está libre.
+> 
+
+---
+
+## 🌍 `curl ifconfig.me` – **Ver tu IP pública**
+
 ```bash
-curl ifconfig.me       
+curl ifconfig.me
 ```
+
+📎 Consulta un servicio web para mostrar tu **IP externa**.
+- Es la dirección que los sitios web ven cuando navegás.
+- Muy útil si estás usando VPN o querés saber si estás expuesto.
+
+> 🧠 Ideal para auditorías, anonimato y control de fugas.
+> 
+
+---
+
+## 🧠 Extra ninja tips
+
+- Usá `ping 8.8.8.8` si querés saber si falla **la red o el DNS**.
+- Usá `ip r` para ver tu **ruta de salida (gateway)**.
+- Usá `nmcli` para controlar conexiones sin entorno gráfico (NetworkManager).
+
+---
+
+> “Quien controla la red, controla el flujo.
+Quien entiende la red, se mueve sin ser visto.”
+>
 
 ---
 
