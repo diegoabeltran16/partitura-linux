@@ -5,6 +5,96 @@
 ---
 
 # 📍 Navegación del sistema de archivos
+## 🧭 ¿Qué es el sistema de archivos?
+
+En Linux, **todo es un archivo**: documentos, carpetas, procesos, dispositivos… incluso el hardware se representa como archivos (por ejemplo, `/dev/sda` es tu disco).
+
+El sistema de archivos es una **estructura jerárquica**, con un único punto de partida: la raíz (`/`).
+
+Desde allí, se ramifica como un árbol de técnicas ocultas y secretos del sistema.
+
+---
+
+## 🌳 Jerarquía básica (el árbol ninja)
+
+```
+php
+CopyEdit
+/
+├── bin/       # Programas esenciales (binarios ejecutables)
+├── boot/      # Archivos de arranque del sistema
+├── dev/       # Dispositivos del sistema (hardware)
+├── etc/       # Archivos de configuración
+├── home/      # Directorios personales de los usuarios
+│   └── lorien/
+├── lib/       # Bibliotecas compartidas
+├── media/     # Unidades montadas como USB
+├── proc/      # Información de procesos y kernel (virtual)
+├── tmp/       # Archivos temporales
+├── usr/       # Programas de usuario
+└── var/       # Archivos variables (logs, colas de impresión)
+
+```
+
+Cada directorio tiene un propósito específico.
+
+Conocer esto te permite moverte **con intención** y no al azar.
+
+---
+
+## 🧙‍♂️ Trucos ninja
+
+### Autocompletado:
+
+Cuando escribís rutas, podés presionar `Tab` para autocompletar nombres.
+
+Muy útil para no escribir todo a mano y evitar errores.
+
+### Ruta absoluta vs. relativa:
+
+- **Absoluta**: `/home/lorien/documentos/tesis.txt` (desde raíz)
+- **Relativa**: `../documentos/tesis.txt` (desde donde estás)
+
+> 🧠 Saber moverte con rutas absolutas es poder. Usar rutas relativas es agilidad.
+> 
+
+---
+
+## 🧩 ¿Y si quiero volver al punto anterior?
+
+Podés usar `cd -` para volver al último directorio en el que estuviste.
+
+```bash
+bash
+CopyEdit
+cd /etc
+cd /usr
+cd -      # Te lleva de nuevo a /etc
+
+```
+
+---
+
+## 🧘‍♂️ Reflexión final
+
+> “El sistema de archivos no es solo estructura... es reflejo del orden mental del programador.”
+> 
+> 
+> Navegar con precisión, sin GUI, es como moverse en la oscuridad con los ojos abiertos.
+> 
+> Y cada paso, cada `cd`, es una decisión consciente.
+>
+
+## 🛤️ Movimiento
+
+- **`cd`** es tu técnica de desplazamiento: no caminas, *te teletransportás* a otro punto del sistema.
+- **`pwd`** te revela el lugar donde estás. Es como mirar tu GPS ninja.
+- **`ls`** es tu vista a lo que te rodea.
+    - Con `ls -l` ves quién puede tocar cada cosa, y cuándo se usó.
+    - Con `ls -a` ves archivos ocultos (`.` archivos de configuración).
+- **`tree`** no es parte del sistema base, pero si lo instalás, te da *visión total del bosque* — para cuando necesitás ver toda la estructura de un golpe.
+
+---
 
 ## 🔍 `pwd` – **Muestra la ruta del directorio actual**
 
@@ -101,38 +191,107 @@ Muestra jerárquicamente las carpetas y subcarpetas.
 
 # 🧠 Información del sistema
 
-## Tu nombre de usuario actual
+Conocer el estado de tu sistema es tan importante como dominar el entorno en una misión.
+
+Estos comandos te permiten hacer un **diagnóstico rápido y efectivo** del entorno donde estás operando —ideal para auditorías, configuraciones iniciales o rescate.
+
+---
+
+## 👤 `whoami` – **Tu nombre de usuario actual**
+
 ```bash
-whoami         
+whoami
 ```
-## Info del kernel y arquitectura
+📎 Devuelve el nombre del usuario activo que ejecuta la terminal.
+🔸 Útil para verificar si estás operando como usuario normal o bajo `sudo`.
+> 🧬 “Conocer tu identidad evita cometer errores con poderes que no te corresponden.”
+> 
+
+---
+
+## 🧬 `uname -a` – **Info del kernel y arquitectura**
 ```bash
 uname -a
 ```
-## Nombre del equipo
+📎 Muestra una línea completa con:
+- Nombre del sistema
+- Versión del kernel
+- Arquitectura (x86_64, arm64…)
+🔸 Ideal para saber si tu sistema es de 32 o 64 bits, o qué versión de Linux estás usando.
+> ⚔️ Un ninja no solo actúa: sabe de qué está hecho su campo de batalla.
+> 
+
+---
+
+## 🖥️ `hostname` – **Nombre del equipo**
+
 ```bash
 hostname
 ```
-## Tiempo encendido
+📎 Muestra el nombre de red asignado a tu equipo.
+🔸 Relevante para configuraciones de red, SSH, y distinguir múltiples equipos conectados.
+> 🏷️ En un dojo lleno de guerreros, saber tu nombre te salva de la confusión.
+> 
+
+---
+
+## ⏱️ `uptime` – **Tiempo encendido**
+
 ```bash
-uptime         
+uptime
 ```
-## Espacio en disco
+📎 Muestra cuánto tiempo lleva encendido el sistema, cuántos usuarios están conectados y la carga del sistema.
+🔸 Útil para detectar reinicios inesperados, estabilidad o duración de sesiones.
+> 🧘 La resistencia de un ninja se mide por su permanencia silenciosa.
+> 
+
+---
+
+## 💾 `df -h` – **Espacio en disco**
 ```bash
-df -h          
+df -h
 ```
-## Memoria disponible
+📎 *Disk Free (human readable)*
+Muestra cuánto espacio hay disponible y cuánto está ocupado en cada partición del sistema.
+🔸 Ideal para revisar antes de instalar algo grande o mover archivos pesados.
+> 📦 Un disco lleno es como una mochila sin espacio: te retrasa y te expone.
+> 
+
+---
+
+## 🧠 `free -h` – **Memoria disponible**
+
 ```bash
-free -h        
+free -h
 ```
-## Info del procesador
+📎 Muestra cuánta RAM y swap están en uso o libres.
+🔸 Te ayuda a entender si el sistema está usando la swap (memoria lenta) o si tiene buena capacidad de respuesta.
+> 💤 Cuando la mente se satura, el ninja se vuelve lento. Igual pasa con la RAM.
+> 
+
+---
+
+## ⚙️ `lscpu` – **Info del procesador**
+
 ```bash
-lscpu          
+lscpu
 ```
-## Dispositivos de almacenamiento
+📎 Lista la arquitectura del CPU, núcleos, hilos, modelo, velocidad...
+🔸 Ideal para saber cuánta potencia tenés disponible para tareas pesadas, compilación, VMs.
+> ⚒️ El corazón del dojo es su forja. El procesador es tu fuego interno.
+> 
+
+---
+
+## 📦 `lsblk` – **Dispositivos de almacenamiento**
+
 ```bash
-lsblk          
+lsblk
 ```
+📎 Muestra los discos, particiones, y puntos de montaje.
+🔸 Fundamental antes de instalar Ventoy, montar un USB, o identificar una unidad externa.
+> 🗺️ Todo ninja debe conocer los caminos del pergamino que porta.
+> 
 
 ---
 
