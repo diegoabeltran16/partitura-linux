@@ -1,9 +1,3 @@
-# 🧰 Comandos esenciales de Linux
-
-🌱 Esta hoja de referencia rápida contiene los comandos fundamentales para orientarte, trabajar y mantener control sobre cualquier sistema GNU/Linux desde la terminal. Ideal para principiantes, entrenamientos o situaciones donde no se cuenta con entorno gráfico.
-
----
-
 # 📍 Navegación del sistema de archivos
 ## 🧭 ¿Qué es el sistema de archivos?
 
