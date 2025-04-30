@@ -17,39 +17,6 @@ Aunque parte del contenido está orientado al **autoentrenamiento**, también es
 
 > Algunas notas están escritas con **doble propósito**: servir como **guía** para quienes comienzan... y también como recordatorios **discretos** para quienes ya han recorrido parte del camino.
 
----
-
-## 🧩 Estructura del proyecto
-
-```bash
-partitura-linux/
-├── 00-instalaciones/
-│   └── -_historia.md
-│   └── -_uso_de_Linux.md
-│   └── 0_ventoy.md
-│   └── 1_kde-neon.md
-│   └── 2_kali-live.md
-│   └── 3_tails.md
-│   └── 4_debian-live.md
-│   └── 5_parrot.md
-│   └── 6_gparted.md
-│   └── 7_rescatux.md
-│   └── 8_fedora.md
-│   └── 9_manjaro.md                   
-├── 01-terminal/
-│   ├── comandos-esenciales.md
-│   └── alias-utiles.md
-├── 02-redes/
-│   └── nmap-basico.md
-├── 03-sistema/
-│   └── permisos-y-usuarios.md
-├── 04-scripts/
-│   └── limpiar-temporal.sh
-├── 05-reflexiones/
-│   └── la-terminal-como-maestro.md
-└── README.md
-```
-
 ## 🧠 Sobre este repositorio
 
 Este proyecto representa un espacio de **entrenamiento constante**, aplicando aprendizajes en entornos reales y adaptando recursos para ser utilizados de forma inmediata desde cualquier sistema Linux, incluyendo distribuciones live o de instalación ligera.
