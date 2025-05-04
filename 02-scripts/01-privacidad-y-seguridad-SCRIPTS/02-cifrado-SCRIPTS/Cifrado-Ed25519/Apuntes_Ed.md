@@ -136,7 +136,7 @@ bash
 ## 🔹 Paso 1: Iniciar el proceso de creación
 
 bash
-`gpg --full-generate-key`
+`gpg --expert --full-generate-key`
 
 Este comando abre el asistente interactivo de GPG.
 
