@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# adjust-onedrive-rclone.sh
-# Script interactivo para reconfigurar el montaje de OneDrive con rclone
+# 03-rclone-adjust-mount.sh
+# Script interactivo para ajustar y regenerar el servicio de montaje de OneDrive con rclone
 #
 set -euo pipefail
 
@@ -17,55 +17,54 @@ ask() {
   local default="$2"
   local answer
   read -rp "$prompt [$default]: " answer
-  if [[ -z "$answer" ]]; then
-    echo "$default"
-  else
-    echo "$answer"
-  fi
+  [[ -z "$answer" ]] && echo "$default" || echo "$answer"
 }
 
-# ── 1) Mostrar explicaciones y opciones ───────────────────
-echo "Configura las opciones de montaje para OneDrive:"
+# ── Introducción ──────────────────────────────────────────
+echo
+echo "=== Ajuste interactivo de montaje OneDrive con rclone ==="
+echo
 
-echo "\n1) Modo VFS cache (controla caché local de archivos):"
+# ── 1) Selección de opciones ──────────────────────────────
+# VFS cache mode
+echo "1) Modo VFS cache (cache local de archivos):"
 echo "   off     - Sin cache local"
 echo "   minimal - Cache de metadatos y lecturas parciales"
 echo "   writes  - Cache solo de escrituras (por defecto)"
 echo "   full    - Cache completa (lectura y escritura)"
 vfs_cache_mode=$(ask "Selecciona modo de VFS cache" "writes")
 
-echo "\n2) Tamaño de buffer de lectura (RAM usada para buffering):"
+echo
+# Buffer size
+echo "2) Tamaño de buffer de lectura (RAM usada para buffering):"
 echo "   Ejemplos: 128M, 256M, 512M (recomendado), 1G"
 buffer_size=$(ask "Tamaño de buffer de lectura" "512M")
 
-echo "\n3) Límite de ancho de banda (transferencia máxima):"
+echo
+# Bandwidth limit
+echo "3) Límite de ancho de banda (transferencia máxima):"
 echo "   Ejemplos: 5M para 5 MiB/s, 10M, deja vacío para sin límite"
 bwlimit=$(ask "Límite de ancho de banda" "")
 
-echo "\n4) Chunk inicial de lectura (--vfs-read-chunk-size):"
+echo
+# Read chunk size
+echo "4) Chunk inicial de lectura (--vfs-read-chunk-size):"
 echo "   Ejemplos: 64M, 128M, 256M, deja vacío para usar cache-mode"
 read_chunk=$(ask "Chunk inicial de lectura" "")
 
 echo
-echo "Se aplicarán las siguientes opciones a tu servicio rclone-onedrive:" 
-printf "  %s\n" "--vfs-cache-mode ${vfs_cache_mode}" "--buffer-size ${buffer_size}" "\${bwlimit:+--bwlimit ${bwlimit}}" "\${read_chunk:+--vfs-read-chunk-size ${read_chunk}}"
-echo
-
 # ── 2) Construir array de opciones ─────────────────────────
 RCLONE_OPTS=(
   --vfs-cache-mode "$vfs_cache_mode"
   --buffer-size     "$buffer_size"
 )
+[[ -n "$bwlimit" ]]   && RCLONE_OPTS+=( --bwlimit "$bwlimit" )
+[[ -n "$read_chunk" ]] && RCLONE_OPTS+=( --vfs-read-chunk-size "$read_chunk" )
 
-# Sólo añade bwlimit si no está vacío
-if [[ -n "$bwlimit" ]]; then
-  RCLONE_OPTS+=( --bwlimit "$bwlimit" )
-fi
-
-# Sólo añade read-chunk-size si no está vacío
-if [[ -n "$read_chunk" ]]; then
-  RCLONE_OPTS+=( --vfs-read-chunk-size "$read_chunk" )
-fi
+# Mostrar resumen de opciones
+echo "Se aplicarán las siguientes opciones a 'rclone mount':"
+printf "  %s\n" "${RCLONE_OPTS[@]}"
+echo
 
 # ── 3) Generar el unit file actualizado ────────────────────
 mkdir -p "$(dirname "$UNIT_FILE")"
@@ -91,6 +90,4 @@ EOF
 systemctl --user daemon-reload
 systemctl --user restart "$SYSTEMD_SVC"
 
-echo "✅ Servicio '$SYSTEMD_SVC' reiniciado con éxito."
-echo "   - Montaje: $MOUNT_POINT"
-echo "   - Opciones: ${RCLONE_OPTS[*]}"
+echo "✅ Servicio '$SYSTEMD_SVC' reiniciado con éxito con las nuevas opciones."
