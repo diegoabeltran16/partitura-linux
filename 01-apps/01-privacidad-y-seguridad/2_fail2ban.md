@@ -38,35 +38,27 @@
 
 Una vez instalado (`sudo apt install fail2ban` o `dnf install fail2ban`), puedes proteger SSH así:
 
-bash
-
-CopyEdit
-
-`sudo systemctl enable --now fail2ban`
+```bash
+sudo systemctl enable --now fail2ban
+```
 
 Archivo de configuración general:
 
-bash
-
-CopyEdit
-
-`/etc/fail2ban/jail.conf (nunca editar este directamente)`
+```bash
+/etc/fail2ban/jail.conf (nunca editar este directamente)
+```
 
 Usar este mejor:
 
-bash
-
-CopyEdit
-
-`/etc/fail2ban/jail.local`
+```bash
+/etc/fail2ban/jail.local
+```
 
 Ejemplo para SSH:
 
-ini
-
-CopyEdit
-
-`[sshd] enabled = true port = ssh logpath = %(sshd_log)s maxretry = 5 bantime = 600 findtime = 600`
+```ini
+[sshd] enabled = true port = ssh logpath = %(sshd_log)s maxretry = 5 bantime = 600 findtime = 600
+```
 
 Este bloquea IPs que fallen 5 veces en 10 minutos por 10 minutos.
 
@@ -76,28 +68,21 @@ Este bloquea IPs que fallen 5 veces en 10 minutos por 10 minutos.
 
 - Ver jails activas:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo fail2ban-client status`
-  
+  ```bash
+  sudo fail2ban-client status
+  ```
+
 - Ver IPs bloqueadas en una jail:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo fail2ban-client status sshd`
-  
+  ```bash
+  sudo fail2ban-client status sshd
+  ```
+
 - Desbloquear IP manualmente:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo fail2ban-client set sshd unbanip 1.2.3.4`
-  
+  ```bash
+  sudo fail2ban-client set sshd unbanip 1.2.3.4
+  ```
 
 ---
 

@@ -30,29 +30,23 @@ Es muy usado en **servidores Linux** (más que en escritorios), sobre todo para 
 
 #### Escaneo básico:
 
-bash
-
-CopyEdit
-
-`clamscan -r /home/usuario`
+```bash
+clamscan -r /home/usuario
+```
 
 (Revisa recursivamente todos los archivos en ese directorio)
 
 #### Escaneo con eliminación automática:
 
-bash
-
-CopyEdit
-
-`clamscan -r --remove=yes /home/usuario`
+```bash
+clamscan -r --remove=yes /home/usuario
+```
 
 #### Escaneo solo de archivos infectados:
 
-bash
-
-CopyEdit
-
-`clamscan -r --infected /home`
+```bash
+clamscan -r --infected /home
+```
 
 ---
 

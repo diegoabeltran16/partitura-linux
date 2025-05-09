@@ -68,20 +68,14 @@ Este proceso simula las **capas de una cebolla**, de ahí su nombre.
 3. Extraer la carpeta y ejecutar:
 
 ```bash
-bash
-CopyEdit
 ./start-tor-browser.desktop
-
 ```
 
 ### O desde terminal (menos recomendado para newbies):
 
 ```bash
-bash
-CopyEdit
 sudo apt install torbrowser-launcher
 torbrowser-launcher
-
 ```
 
 ---

@@ -47,10 +47,7 @@ Porque en Linux **la terminal no debería pedirte contraseñas directamente** en
 ## 🧪 ¿Cómo instalar y usar?
 
 ```bash
-bash
-CopyEdit
 sudo apt install pinentry-gtk2
-
 ```
 
 Y luego, asegurate de que `gpg-agent` esté configurado para usarla:
@@ -58,28 +55,19 @@ Y luego, asegurate de que `gpg-agent` esté configurado para usarla:
 ### 📁 Editá el archivo de configuración de GPG
 
 ```bash
-bash
-CopyEdit
 nano ~/.gnupg/gpg-agent.conf
-
 ```
 
 Y agregá:
 
-```
-bash
-CopyEdit
+```bash
 pinentry-program /usr/bin/pinentry-gtk-2
-
 ```
 
 🔄 Luego reiniciás el agente:
 
 ```bash
-bash
-CopyEdit
 gpg-connect-agent reloadagent /bye
-
 ```
 
 Ahora, cada vez que GPG necesite tu clave, **pinentry-gtk2 abrirá un cuadro gráfico** para ingresarla.

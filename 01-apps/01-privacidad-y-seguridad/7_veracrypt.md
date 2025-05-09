@@ -52,10 +52,7 @@ Está diseñada para proteger tus archivos **de accesos no autorizados**, inclus
 En Debian/Ubuntu:
 
 ```bash
-bash
-CopyEdit
 sudo apt install veracrypt
-
 ```
 
 O desde la página oficial para mayor control.

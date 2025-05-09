@@ -48,12 +48,9 @@
 
 - Instala `GUFW`, una interfaz gráfica para `ufw` (ideal para escritorios):
   
-  bash
-  
-  CopyEdit
-  
-  `sudo apt install gufw`
-  
+  ```bash
+  sudo apt install gufw
+  ```
 
 ---
 
@@ -67,12 +64,9 @@
   
 - Siempre **habilita solo después de configurar reglas mínimas**, por ejemplo:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo ufw allow ssh sudo ufw enable`
-  
+  ```bash
+  sudo ufw allow ssh sudo ufw enable
+  ```
 
 ---
 
@@ -82,20 +76,15 @@
 
 - Activa el registro de eventos:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo ufw logging on`
-  
+  ```bash
+  sudo ufw logging on
+  ```
+
 - Luego puedes consultar en:
   
-  bash
-  
-  CopyEdit
-  
-  `tail -f /var/log/ufw.log`
-  
+  ```bash 
+  tail -f /var/log/ufw.log
+  ```
 
 ---
 
@@ -116,10 +105,9 @@
 
 ## 🧪 Buenas prácticas para usar `ufw`
 
-bash
-
-CopyEdit
+```bash
 
 `# Ver el estado sudo ufw status verbose # Permitir solo conexiones SSH desde una IP segura sudo ufw allow from 192.168.1.100 to any port 22 # Bloquear tráfico por defecto y luego abrir lo necesario sudo ufw default deny incoming sudo ufw default allow outgoing # Permitir puertos comunes sudo ufw allow 80/tcp # HTTP sudo ufw allow 443/tcp # HTTPS`
+```
 
 ---

@@ -57,35 +57,27 @@
 
 Instalación en Debian/Ubuntu:
 
-bash
-
-CopyEdit
-
-`sudo apt install rkhunter`
+```bash
+sudo apt install rkhunter
+```
 
 Actualizar base de datos:
 
-bash
-
-CopyEdit
-
-`sudo rkhunter --update`
+```bash
+sudo rkhunter --update
+```
 
 Ejecutar un escaneo:
 
-bash
-
-CopyEdit
-
-`sudo rkhunter --check`
+```bash
+sudo rkhunter --check
+```
 
 Ver resultados:
 
-bash
-
-CopyEdit
-
-`less /var/log/rkhunter.log`
+```bash
+less /var/log/rkhunter.log
+```
 
 ---
 
@@ -117,22 +109,18 @@ Sí, **si quieres una capa adicional de seguridad**, especialmente en:
 
 - ✅ **Actualiza la base de firmas después de instalar o actualizar software**:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo rkhunter --propupd`
+  ```bash
+  sudo rkhunter --propupd
+  ```
   
   Esto le dice a `rkhunter` que los cambios actuales son legítimos.
   
 - 🔍 **Lee el log con cuidado**:
   
-  bash
-  
-  CopyEdit
-  
-  `less /var/log/rkhunter.log`
-  
+  ```bash
+  less /var/log/rkhunter.log
+  ```
+
   Revisa las advertencias y verifica manualmente si son normales (ej. `netstat` modificado por una actualización).
   
 
@@ -146,28 +134,21 @@ Sí, **si quieres una capa adicional de seguridad**, especialmente en:
 
 - 🔄 **Programa los escaneos fuera del horario de uso** usando `cron`:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo crontab -e`
-  
+  ```bash
+  sudo crontab -e
+  ```
+
   Ejemplo:
   
-  cron
-  
-  CopyEdit
-  
-  `0 3 * * * /usr/bin/rkhunter --check --quiet`
-  
+  ```cron
+  0 3 * * * /usr/bin/rkhunter --check --quiet
+  ```
+
 - 🧹 **Excluye rutas no relevantes** en `/etc/rkhunter.conf`:
   
-  ini
-  
-  CopyEdit
-  
-  `SKIPFS="/dev /proc /sys /tmp /run"`
-  
+  ```ini
+  SKIPFS="/dev /proc /sys /tmp /run"
+  ```
 
 ---
 
@@ -177,20 +158,16 @@ Sí, **si quieres una capa adicional de seguridad**, especialmente en:
 
 - 📥 **Actualiza frecuentemente la base de datos**:
   
-  bash
-  
-  CopyEdit
-  
-  `sudo rkhunter --update`
-  
+  ```bash
+  sudo rkhunter --update
+  ```
+
 - 🛠️ Automatiza esto con `cron`:
   
-  cron
-  
-  CopyEdit
-  
-  `0 1 * * * /usr/bin/rkhunter --update`
-  
+  ```cron 
+  0 1 * * * /usr/bin/rkhunter --update
+  ```
+
 
 ---
 
@@ -209,12 +186,9 @@ Sí, **si quieres una capa adicional de seguridad**, especialmente en:
 - 📬 **Habilita alertas por correo electrónico**:
   En `/etc/rkhunter.conf`, configura:
   
-  ini
-  
-  CopyEdit
-  
-  `MAIL-ON-WARNING=tuemail@dominio.com`
-  
+  ```ini 
+  MAIL-ON-WARNING=tuemail@dominio.com
+  ```
 
 ---
 

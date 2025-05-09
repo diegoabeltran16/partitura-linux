@@ -36,19 +36,15 @@ Es útil sobre todo en **entornos donde se requiere trazabilidad y cumplimiento*
 
 Supón que quieres monitorear accesos al archivo `/etc/passwd`:
 
-bash
-
-CopyEdit
-
-`sudo auditctl -w /etc/passwd -p rwxa -k passwd-watch`
+```bash
+sudo auditctl -w /etc/passwd -p rwxa -k passwd-watch
+```
 
 Esto audita lecturas, escrituras, ejecuciones y cambios de atributos sobre el archivo. Luego puedes buscar eventos con:
 
-bash
-
-CopyEdit
-
-`sudo ausearch -k passwd-watch`
+```bash
+sudo ausearch -k passwd-watch
+```
 
 ---
 

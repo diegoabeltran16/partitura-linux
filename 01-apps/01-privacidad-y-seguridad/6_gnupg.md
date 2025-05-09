@@ -49,10 +49,7 @@ GnuPG trabaja con un sistema de **clave pública y privada** (par de llaves):
 Ya viene en la mayoría de distribuciones, pero si no:
 
 ```bash
-bash
-CopyEdit
 sudo apt install gnupg
-
 ```
 
 ---
@@ -60,10 +57,7 @@ sudo apt install gnupg
 ### 🔧 1. Crear tu par de llaves
 
 ```bash
-bash
-CopyEdit
 gpg --full-generate-key
-
 ```
 
 - Elegí: RSA y RSA (por defecto)
@@ -81,17 +75,13 @@ gpg --full-generate-key
 ### 📫 2. Exportar tu clave pública (para compartir)
 
 ```bash
-bash
-CopyEdit
 gpg --armor --export tu_id_o_email
-
 ```
 
 Esto genera algo así:
 
-```
-vbnet
-CopyEdit
+```vbnet
+
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 ...
 -----END PGP PUBLIC KEY BLOCK-----
@@ -105,10 +95,7 @@ Podés enviarla, subirla a servidores de claves, o guardarla en un README.
 ### 🔒 3. Cifrar un archivo
 
 ```bash
-bash
-CopyEdit
 gpg -e -r nombre_o_email archivo.txt
-
 ```
 
 Esto crea `archivo.txt.gpg` cifrado, que solo el destinatario puede abrir.
@@ -118,10 +105,7 @@ Esto crea `archivo.txt.gpg` cifrado, que solo el destinatario puede abrir.
 ### 🔓 4. Descifrar un archivo
 
 ```bash
-bash
-CopyEdit
 gpg -d archivo.txt.gpg
-
 ```
 
 Solo vos, con tu clave privada, podés leerlo.
@@ -131,10 +115,7 @@ Solo vos, con tu clave privada, podés leerlo.
 ### ✍️ 5. Firmar un archivo
 
 ```bash
-bash
-CopyEdit
 gpg -s archivo.txt
-
 ```
 
 Esto genera `archivo.txt.gpg` firmado. Sirve para verificar autoría.
@@ -142,10 +123,7 @@ Esto genera `archivo.txt.gpg` firmado. Sirve para verificar autoría.
 También podés firmar sin cifrar:
 
 ```bash
-bash
-CopyEdit
 gpg --clearsign archivo.txt
-
 ```
 
 ---
@@ -153,19 +131,13 @@ gpg --clearsign archivo.txt
 ### ✅ 6. Verificar una firma
 
 ```bash
-bash
-CopyEdit
 gpg --verify archivo.txt.asc
-
 ```
 
 Si la firma es válida y coincide con la clave del autor, verás algo como:
 
 ```bash
-bash
-CopyEdit
 Good signature from "Sensei Ninja <ninja@dojo.io>"
-
 ```
 
 ---
