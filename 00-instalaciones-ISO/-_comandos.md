@@ -1,19 +1,13 @@
 # 📍 Navegación del sistema de archivos
 ## 🧭 ¿Qué es el sistema de archivos?
-
 En Linux, **todo es un archivo**: documentos, carpetas, procesos, dispositivos… incluso el hardware se representa como archivos (por ejemplo, `/dev/sda` es tu disco).
 
 El sistema de archivos es una **estructura jerárquica**, con un único punto de partida: la raíz (`/`).
-
 Desde allí, se ramifica como un árbol de técnicas ocultas y secretos del sistema.
-
----
 
 ## 🌳 Jerarquía básica (el árbol ninja)
 
-```
-php
-CopyEdit
+```php
 /
 ├── bin/       # Programas esenciales (binarios ejecutables)
 ├── boot/      # Archivos de arranque del sistema
@@ -36,22 +30,17 @@ Conocer esto te permite moverte **con intención** y no al azar.
 
 ---
 
-## 🧙‍♂️ Trucos ninja
-
+## Trucos ninja
 ### Autocompletado:
-
 Cuando escribís rutas, podés presionar `Tab` para autocompletar nombres.
-
 Muy útil para no escribir todo a mano y evitar errores.
 
 ### Ruta absoluta vs. relativa:
-
 - **Absoluta**: `/home/lorien/documentos/tesis.txt` (desde raíz)
 - **Relativa**: `../documentos/tesis.txt` (desde donde estás)
 
 > 🧠 Saber moverte con rutas absolutas es poder. Usar rutas relativas es agilidad.
 > 
-
 ---
 
 ## 🧩 ¿Y si quiero volver al punto anterior?
@@ -59,12 +48,9 @@ Muy útil para no escribir todo a mano y evitar errores.
 Podés usar `cd -` para volver al último directorio en el que estuviste.
 
 ```bash
-bash
-CopyEdit
 cd /etc
 cd /usr
 cd -      # Te lleva de nuevo a /etc
-
 ```
 
 ---
@@ -95,6 +81,7 @@ cd -      # Te lleva de nuevo a /etc
 ```bash
 pwd
 ```
+
 📎 *Print Working Directory*
 Te dice en qué parte del sistema estás parado.
 🔸 Ideal cuando trabajás con scripts o te perdés dentro de muchas carpetas anidadas.
@@ -196,6 +183,7 @@ Estos comandos te permiten hacer un **diagnóstico rápido y efectivo** del ento
 ```bash
 whoami
 ```
+
 📎 Devuelve el nombre del usuario activo que ejecuta la terminal.
 🔸 Útil para verificar si estás operando como usuario normal o bajo `sudo`.
 > 🧬 “Conocer tu identidad evita cometer errores con poderes que no te corresponden.”
@@ -222,6 +210,7 @@ uname -a
 ```bash
 hostname
 ```
+
 📎 Muestra el nombre de red asignado a tu equipo.
 🔸 Relevante para configuraciones de red, SSH, y distinguir múltiples equipos conectados.
 > 🏷️ En un dojo lleno de guerreros, saber tu nombre te salva de la confusión.
