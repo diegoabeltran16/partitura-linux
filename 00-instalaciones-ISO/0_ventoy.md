@@ -4,7 +4,7 @@
 
 Este documento describe cómo instalar, configurar y utilizar Ventoy en diferentes sistemas operativos, para construir un entorno multiboot enfocado en la privacidad, la recuperación, el entrenamiento técnico y la autonomía digital.
 
-### 🧠 Metáfora ninja:
+### 🧠 Metáfora:
 
 > **Ventoy es como el pergamino de invocación.**  
 > Lleva varias técnicas (ISOs) en su interior, y cuando elegís una, la invoca temporalmente al campo (RAM), sin dejar rastro en la base (el disco del enemigo 😄).
@@ -233,14 +233,11 @@ No se lleva bien con pergaminos multiboot sin disciplina previa. 😅
 
 - Actualizar Ventoy sin borrar ISOs:
 
-bash
-
-CopyEdit
-
+```bash
 `sudo ./Ventoy2Disk.sh -u /dev/sdX`
+```
 
 - Algunas distros requieren: GRUB2 Mode o Safe Graphics
-  
 - Puedes crear menús personalizados usando `ventoy.json`
   
 
