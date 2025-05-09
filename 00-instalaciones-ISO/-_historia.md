@@ -1,6 +1,6 @@
 # Historia y contexto de Linux: origen, evolución y contraste con sistemas propietarios
 
-## 1. 📜 Un nacimiento técnico... con consecuencias culturales
+## 📜 Un nacimiento técnico... con consecuencias culturales
 
 En 1991, un estudiante finlandés llamado Linus Torvalds publicó un mensaje en un grupo de noticias:
 
@@ -16,7 +16,7 @@ Así, lo que empezó como un hobby se convirtió en un sistema operativo funcion
 
 ---
 
-## 2. 🧱 ¿Qué es UNIX y cómo se relaciona con Linux?
+## 🧱 ¿Qué es UNIX y cómo se relaciona con Linux?
 
 **UNIX** es el antecesor ideológico de Linux.  
 Nacido en los años 70 en los laboratorios Bell de AT&T, su diseño se centró en la **simplicidad, la portabilidad y la filosofía modular**.  
@@ -48,7 +48,7 @@ Linux no hereda código fuente de UNIX, pero sí su estructura, comportamiento y
 
 ---
 
-## 3. 🧬 El otro camino: Microsoft y Apple
+## 🧬 El otro camino: Microsoft y Apple
 
 Mientras UNIX influía en el mundo académico y científico, otras empresas definían su propio rumbo: **el ecosistema cerrado.**
 
@@ -64,7 +64,7 @@ Ambos modelos ofrecen conveniencia, pero a costa de control, privacidad y flexib
 
 ---
 
-## 4. 🧭 Entonces… ¿cuándo Linux se volvió una respuesta?
+## 🧭 Entonces… ¿cuándo Linux se volvió una respuesta?
 
 Aunque nació como un proyecto experimental, **Linux se transformó en una herramienta para quienes deseaban:**
 
@@ -77,7 +77,7 @@ Aunque nació como un proyecto experimental, **Linux se transformó en una herra
 
 ---
 
-## 5. 🌐 El multiverso Linux hoy: propósito, no producto
+## 🌐 El multiverso Linux hoy: propósito, no producto
 
 Linux no es una marca, ni una empresa.  
 Es un conjunto de distros, filosofías y comunidades.
@@ -92,7 +92,7 @@ Es un conjunto de distros, filosofías y comunidades.
 
 ---
 
-## 6. 🧠 Síntesis: control, código y cultura
+## 🧠 Síntesis: control, código y cultura
 
 | Pregunta | Windows/macOS | Linux |
 | --- | --- | --- |
@@ -104,7 +104,7 @@ Es un conjunto de distros, filosofías y comunidades.
 
 ---
 
-## 7. 🧩 Conclusión técnica y personal
+## 🧩 Conclusión técnica y personal
 
 > *Linux no nació para luchar, 
 > pero terminó liberando a quienes querían elegir.*
