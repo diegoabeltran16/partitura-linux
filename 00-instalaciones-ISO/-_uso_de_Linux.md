@@ -16,7 +16,7 @@ En este repositorio se describen los distintos tipos de instalación, los contex
 
 ---
 
-## 1. Justificación técnica del uso de Linux
+## Justificación técnica del uso de Linux
 
 El uso de sistemas GNU/Linux ha ido más allá del ámbito académico o comunitario, consolidándose como un entorno de desarrollo, administración y operación en múltiples sectores: ciberseguridad, servidores, redes, ciencia de datos, educación y más.
 
@@ -30,7 +30,7 @@ Razones comunes para su adopción incluyen:
 
 ---
 
-## 2. Clasificación de métodos de uso e instalación
+## Clasificación de métodos de uso e instalación
 
 A continuación, se presentan los principales enfoques de instalación, clasificados por su nivel de persistencia, complejidad y aplicabilidad:
 
@@ -44,7 +44,7 @@ A continuación, se presentan los principales enfoques de instalación, clasific
 
 ---
 
-## 3. Razonamiento detrás del enfoque multiboot
+## Razonamiento detrás del enfoque multiboot
 
 Un entorno multiboot correctamente estructurado permite la coexistencia de múltiples sistemas especializados en una misma unidad extraíble. Esta solución permite:
 
@@ -57,7 +57,7 @@ Todo sin comprometer el equipo anfitrión ni la integridad del sistema operativo
 
 ---
 
-## 4. Consideraciones éticas y operativas
+## Consideraciones éticas y operativas
 
 En entornos donde se prioriza la privacidad, el anonimato o la no persistencia, es fundamental aplicar criterios técnicos rigurosos:
 
