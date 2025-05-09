@@ -33,14 +33,11 @@ Ambos son **comandos de terminal para transferir datos** desde o hacia servidore
 ### 📁 Descargar un archivo
 
 ```bash
-bash
-CopyEdit
 # Con curl
 curl -O https://example.com/archivo.zip
 
 # Con wget
 wget https://example.com/archivo.zip
-
 ```
 
 - `O` en `curl` guarda con el mismo nombre del archivo original.
@@ -51,10 +48,7 @@ wget https://example.com/archivo.zip
 ### 🌐 Obtener la IP pública
 
 ```bash
-bash
-CopyEdit
 curl ifconfig.me
-
 ```
 
 > 📡 Ideal cuando querés saber desde qué IP salís al mundo.
@@ -65,10 +59,7 @@ curl ifconfig.me
 ### 🤖 Consumir una API REST
 
 ```bash
-bash
-CopyEdit
 curl https://api.github.com/users/naveen
-
 ```
 
 > Verás la respuesta en formato JSON.
@@ -82,10 +73,7 @@ curl https://api.github.com/users/naveen
 ### 📤 Enviar datos (POST)
 
 ```bash
-bash
-CopyEdit
 curl -X POST -d "usuario=naveen&clave=sombra" https://midominio.com/login
-
 ```
 
 > En pruebas de formularios o simulaciones de navegación, curl es esencial.
@@ -96,10 +84,7 @@ curl -X POST -d "usuario=naveen&clave=sombra" https://midominio.com/login
 ### 🌐 Descargar sitio completo con `wget`
 
 ```bash
-bash
-CopyEdit
 wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://misitioweb.com
-
 ```
 
 > ⚠️ Esto es muy avanzado, y debe usarse con responsabilidad y ética.
@@ -116,8 +101,6 @@ Puede descargar una copia navegable de un sitio (ideal para estudios offline).
 - En conexiones inestables:
     
     ```bash
-    bash
-    CopyEdit
     wget -c https://archivo.iso  # continúa descarga si se interrumpe
     
     ```

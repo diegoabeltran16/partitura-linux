@@ -20,8 +20,6 @@ Incluye comandos como:
 ## 🛠️ ¿Cómo instalarlo?
 
 ```bash
-bash
-CopyEdit
 sudo apt install net-tools
 
 ```
@@ -35,10 +33,7 @@ sudo apt install net-tools
 ### 1. `ifconfig` – Ver interfaces de red
 
 ```bash
-bash
-CopyEdit
 ifconfig
-
 ```
 
 🔍 Muestra:
@@ -55,10 +50,7 @@ ifconfig
 ### 2. `netstat` – Ver conexiones activas y puertos
 
 ```bash
-bash
-CopyEdit
 netstat -tuln
-
 ```
 
 🔍 Útil para:
@@ -75,10 +67,7 @@ netstat -tuln
 ### 3. `route` – Ver tabla de enrutamiento
 
 ```bash
-bash
-CopyEdit
 route -n
-
 ```
 
 🔍 Muestra cómo se enrutan los paquetes hacia otras redes o internet.
@@ -91,10 +80,7 @@ route -n
 ### 4. `arp` – Ver tabla ARP (vecinos de red)
 
 ```bash
-bash
-CopyEdit
 arp -a
-
 ```
 
 🔍 Lista dispositivos conectados recientemente en tu red local, con IP y MAC.
@@ -107,10 +93,7 @@ arp -a
 ### 5. `nameif` – Renombrar interfaces de red
 
 ```bash
-bash
-CopyEdit
 nameif eth0 ninja0
-
 ```
 
 🔧 Rara vez usado hoy, pero útil para scripts avanzados o configuraciones estáticas.

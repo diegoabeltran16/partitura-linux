@@ -27,10 +27,7 @@ Permite saber **quién registró un dominio, cuándo, con qué datos y ante qué
 ## 🛠️ Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install whois
-
 ```
 
 ---
@@ -40,10 +37,7 @@ sudo apt install whois
 ### 🔍 Consultar un dominio
 
 ```bash
-bash
-CopyEdit
 whois dominio.com
-
 ```
 
 🔸 Devuelve todo el registro: fechas, registrador, contactos, DNS...
@@ -53,10 +47,7 @@ whois dominio.com
 ### 📡 Consultar una IP
 
 ```bash
-bash
-CopyEdit
 whois 8.8.8.8
-
 ```
 
 🔹 Muestra el rango de IP, la organización y el país.
@@ -69,17 +60,12 @@ whois 8.8.8.8
 ## 📦 Ejemplo práctico
 
 ```bash
-bash
-CopyEdit
 whois openai.com
-
 ```
 
 Resultado parcial:
 
-```
-yaml
-CopyEdit
+```yaml
 Registrar: MarkMonitor Inc.
 Creation Date: 2015-04-16
 Updated Date: 2023-03-27

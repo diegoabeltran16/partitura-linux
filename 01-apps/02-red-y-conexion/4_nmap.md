@@ -28,10 +28,7 @@ Porque permite:
 ## 🛠️ Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install nmap
-
 ```
 
 ---
@@ -41,11 +38,8 @@ sudo apt install nmap
 ### 🔍 Escanear una IP o dominio
 
 ```bash
-bash
-CopyEdit
 nmap 192.168.1.1
 nmap ejemplo.com
-
 ```
 
 🔸 Muestra puertos abiertos y servicios básicos.
@@ -55,10 +49,7 @@ nmap ejemplo.com
 ### 🚪 Escanear puertos comunes
 
 ```bash
-bash
-CopyEdit
 nmap -F 192.168.1.1
-
 ```
 
 - `F`: escaneo rápido (los puertos más usados).
@@ -68,10 +59,7 @@ nmap -F 192.168.1.1
 ### 👁️ Escaneo detallado (versión + sistema operativo)
 
 ```bash
-bash
-CopyEdit
 nmap -A 192.168.1.1
-
 ```
 
 Incluye:
@@ -88,10 +76,7 @@ Incluye:
 ### 📡 Escaneo de red completa
 
 ```bash
-bash
-CopyEdit
 nmap -sn 192.168.1.0/24
-
 ```
 
 🔹 Descubre qué dispositivos están **conectados en tu LAN**.
@@ -101,10 +86,7 @@ nmap -sn 192.168.1.0/24
 ### 🔐 Escanear puertos específicos
 
 ```bash
-bash
-CopyEdit
 nmap -p 22,80,443 192.168.1.1
-
 ```
 
 ---
@@ -112,10 +94,7 @@ nmap -p 22,80,443 192.168.1.1
 ### 🧪 Usar scripts NSE (Nmap Scripting Engine)
 
 ```bash
-bash
-CopyEdit
 nmap --script vuln 192.168.1.1
-
 ```
 
 Escanea vulnerabilidades conocidas.
