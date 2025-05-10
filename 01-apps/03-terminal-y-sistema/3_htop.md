@@ -29,10 +29,7 @@ Te permite:
 ### 🚀 Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install htop
-
 ```
 
 ---
@@ -42,10 +39,7 @@ sudo apt install htop
 Ejecutalo desde terminal:
 
 ```bash
-bash
-CopyEdit
 htop
-
 ```
 
 Controles básicos:

@@ -25,81 +25,64 @@
 
 1. **Consultar APIs REST**
   
-  bash
-  
-  CopyEdit
-  
-  `curl -s https://api.example.com/users | jq '.users[] | {id,name,email}'`
-  
+  ```bash
+  curl -s https://api.example.com/users | jq '.users[] | {id,name,email}'
+  ```
   Extraes sólo los campos que te interesan, descartando el resto.
   
 2. **Validación y pretty-print**
   
-  bash
-  
-  CopyEdit
-  
-  `jq . archivo.json`
-  
+  ```bash
+  jq . archivo.json
+  ```
+
   Reformatea el JSON con indentación legible; detecta errores de sintaxis.
   
 3. **Transformación masiva de datos**
   
-  bash
-  
-  CopyEdit
-  
-  `jq 'map(.price |= (. * 1.16))' productos.json`
-  
+  ```bash
+  jq 'map(.price |= (. * 1.16))' productos.json
+  ```
+
   Aplica un aumento del 16 % a todos los precios de un array.
   
 4. **Extracción de estadísticas o recuentos**
   
-  bash
-  
-  CopyEdit
-  
-  `jq '[.logs[].level] | group_by(.) | map({level: .[0], count: length})' logs.json`
-  
+ ```bash
+ jq '[.logs[].level] | group_by(.) | map({level: .[0], count: length})' logs.json
+  ```
+
   Obtienes cuántos mensajes de cada nivel (“info”, “error”, …) hay en un log.
   
 5. **Generación de configuraciones**
   
-  bash
-  
-  CopyEdit
-  
-  `cat plantillas.json | jq --arg host "$HOST" '.database.host = $host'`
-  
+  ```bash
+  cat plantillas.json | jq --arg host "$HOST" '.database.host = $host'
+  ```
+
   Rellena valores dinámicamente antes de desplegar un servicio.
   
 6. **Combinar múltiples fuentes JSON**
   
-  bash
-  
-  CopyEdit
-  
-  `jq -s 'add | .items |= unique_by(.id)' f1.json f2.json`
-  
+  ```bash
+  jq -s 'add | .items |= unique_by(.id)' f1.json f2.json
+  ```
+
   Suma dos arrays y elimina duplicados por `id`.
   
 7. **Extracción de datos anidados**
   
-  bash
-  
-  CopyEdit
-  
-  `jq -r '.users[] | .roles[]?' datos.json`
+  ```bash
+  jq -r '.users[] | .roles[]?' datos.json
+  ```
   
   Listas planas de elementos que estaban en varias capas de anidamiento.
   
 8. **Pipeline en bash**
   
-  bash
-  
-  CopyEdit
-  
-  `cat datos.json \ | jq '.items[]' \ | grep '"status":"active"' \ | jq '.name, .email'`
+  ```bash
+  cat datos.json \ | jq '.items[]' \ | grep '"status":"active"' \ | jq '.name, .email'
+  ```
   
   Integración con comandos de texto estándar para flujos de trabajo complejos.
   

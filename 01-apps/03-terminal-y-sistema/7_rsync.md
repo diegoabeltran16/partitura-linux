@@ -26,10 +26,7 @@ Su magia está en que **solo transfiere los cambios**, no todo el archivo.
 ### 🚀 ¿Cómo se instala?
 
 ```bash
-bash
-CopyEdit
 sudo apt install rsync
-
 ```
 
 ---
@@ -37,10 +34,7 @@ sudo apt install rsync
 ### 📦 Uso básico
 
 ```bash
-bash
-CopyEdit
 rsync -av origen/ destino/
-
 ```
 
 | Opción | Significado |
@@ -58,19 +52,13 @@ rsync -av origen/ destino/
 ### 📡 Transferencia por red (SSH)
 
 ```bash
-bash
-CopyEdit
 rsync -av archivo.txt usuario@ip:/ruta/destino/
-
 ```
 
 También podés **traer archivos** desde otro equipo:
 
 ```bash
-bash
-CopyEdit
 rsync -av usuario@ip:/ruta/origen/ ./local/
-
 ```
 
 ---
@@ -80,17 +68,11 @@ rsync -av usuario@ip:/ruta/origen/ ./local/
 Ideal para automatizar backups diarios:
 
 ```bash
-bash
-CopyEdit
 crontab -e
-
 ```
 
-```
-cron
-CopyEdit
+```cron
 0 2 * * * rsync -av ~/documentos/ /mnt/backup/
-
 ```
 
 (backup a las 2 AM todos los días)

@@ -31,58 +31,40 @@ Su objetivo es simple, pero profundo:
 Instalación:
 
 ```bash
-bash
-CopyEdit
 sudo apt install git
-
 ```
 
 Configuración básica:
 
 ```bash
-bash
-CopyEdit
 git config --global user.name "Naveen"
 git config --global user.email "ninja@protonmail.com"
-
 ```
 
 Crear un nuevo repositorio:
 
 ```bash
-bash
-CopyEdit
 git init
-
 ```
 
 Guardar cambios:
 
 ```bash
-bash
-CopyEdit
 git add archivo.md     # Preparar archivo
 git commit -m "Mensaje" # Guardar en el historial
-
 ```
 
 Ver historial:
 
 ```bash
-bash
-CopyEdit
 git log
-
 ```
 
 Conectarse a un repositorio remoto (por ejemplo, GitHub):
 
 ```bash
-bash
-CopyEdit
 git remote add origin https://github.com/usuario/repositorio.git
 git push -u origin main
-
 ```
 
 ---

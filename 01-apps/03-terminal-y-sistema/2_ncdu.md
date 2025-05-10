@@ -23,10 +23,7 @@ Es como usar una balanza mágica que **te dice qué directorios están ocupando 
 ### 🛠️ Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install ncdu
-
 ```
 
 ---
@@ -36,19 +33,13 @@ sudo apt install ncdu
 Desde la terminal, ejecutá:
 
 ```bash
-bash
-CopyEdit
 ncdu
-
 ```
 
 o si querés escanear una ruta específica:
 
 ```bash
-bash
-CopyEdit
 ncdu /home/usuario
-
 ```
 
 ---

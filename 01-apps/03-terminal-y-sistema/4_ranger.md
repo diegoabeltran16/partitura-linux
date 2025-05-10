@@ -26,19 +26,13 @@ Está escrito en Python y utiliza **atajos tipo Vim** para moverse por el sistem
 ### 🧪 Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install ranger
-
 ```
 
 🔸 También podés instalar complementos como:
 
 ```bash
-bash
-CopyEdit
 sudo apt install highlight w3m atool mediainfo
-
 ```
 
 Estos mejoran la **previsualización de archivos, PDFs, videos y más**.
@@ -48,10 +42,7 @@ Estos mejoran la **previsualización de archivos, PDFs, videos y más**.
 ### 🚀 ¿Cómo se usa?
 
 ```bash
-bash
-CopyEdit
 ranger
-
 ```
 
 Y listo, te abre una interfaz tipo panel en terminal.
@@ -79,10 +70,7 @@ Y listo, te abre una interfaz tipo panel en terminal.
 Podés configurar tu comportamiento en:
 
 ```bash
-bash
-CopyEdit
 ~/.config/ranger/rc.conf
-
 ```
 
 También soporta **previsualizaciones** de imágenes, contenido textual, PDF, etc.

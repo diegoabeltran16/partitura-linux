@@ -26,10 +26,7 @@ te permite **dividir una sola terminal en múltiples paneles**, sesiones o venta
 ### 🚀 ¿Cómo se instala?
 
 ```bash
-bash
-CopyEdit
 sudo apt install tmux
-
 ```
 
 ---

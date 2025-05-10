@@ -25,10 +25,7 @@ En vez de solo listar carpetas con `ls`, **te da una visión completa y jerárqu
 ### 🚀 ¿Cómo se instala?
 
 ```bash
-bash
-CopyEdit
 sudo apt install tree
-
 ```
 
 > ⚠️ No viene preinstalado por defecto en muchas distros.
@@ -39,10 +36,7 @@ sudo apt install tree
 ### 📂 Uso básico
 
 ```bash
-bash
-CopyEdit
 tree
-
 ```
 
 🔸 Esto muestra el árbol desde el directorio actual.
@@ -64,10 +58,7 @@ tree
 ### 🧩 Ejemplo:
 
 ```bash
-bash
-CopyEdit
 tree -L 2 -a ~/Documentos
-
 ```
 
 Muestra la jerarquía hasta dos niveles, incluyendo archivos ocultos, dentro de `Documentos`.

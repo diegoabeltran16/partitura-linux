@@ -16,19 +16,13 @@
 Instalación:
 
 ```bash
-bash
-CopyEdit
 sudo apt install fish
-
 ```
 
 Cambio de shell por defecto:
 
 ```bash
-bash
-CopyEdit
 chsh -s /usr/bin/fish
-
 ```
 
 Luego reiniciás sesión y ya estarás trabajando con `fish`.

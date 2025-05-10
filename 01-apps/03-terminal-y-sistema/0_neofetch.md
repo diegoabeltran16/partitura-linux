@@ -45,10 +45,7 @@ Todo junto a un logo ASCII que **cambia según tu distro**.
 ### 🧪 Instalación
 
 ```bash
-bash
-CopyEdit
 sudo apt install neofetch
-
 ```
 
 ---
@@ -56,37 +53,25 @@ sudo apt install neofetch
 ### 🚀 ¿Cómo se usa?
 
 ```bash
-bash
-CopyEdit
 neofetch
-
 ```
 
 Si querés usarlo automáticamente al abrir la terminal:
 
 ```bash
-bash
-CopyEdit
 echo "neofetch" >> ~/.bashrc
-
 ```
 
 Y luego:
 
 ```bash
-bash
-CopyEdit
 source ~/.bashrc
-
 ```
 
 🔧 También podés editar su configuración:
 
 ```bash
-bash
-CopyEdit
 nano ~/.config/neofetch/config.conf
-
 ```
 
 ---
