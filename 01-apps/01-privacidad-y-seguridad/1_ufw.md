@@ -102,12 +102,3 @@
     
 
 ---
-
-## 🧪 Buenas prácticas para usar `ufw`
-
-```bash
-
-`# Ver el estado sudo ufw status verbose # Permitir solo conexiones SSH desde una IP segura sudo ufw allow from 192.168.1.100 to any port 22 # Bloquear tráfico por defecto y luego abrir lo necesario sudo ufw default deny incoming sudo ufw default allow outgoing # Permitir puertos comunes sudo ufw allow 80/tcp # HTTP sudo ufw allow 443/tcp # HTTPS`
-```
-
----
