@@ -102,3 +102,104 @@
     
 
 ---
+
+SCRIPT [[diegoabeltran16/partitura-linux/02-scripts/01-privacidad-y-seguridad-SCRIPTS/03-UFC-scipts/ufw-manager.sh]]
+
+ 1) Inicializar firewall (reset + políticas por defecto)
+ 2) Permitir SSH
+ 3) Permitir HTTP/HTTPS
+ 4) Permitir puerto personalizado
+ 5) Denegar puerto personalizado
+ 6) Permitir IP específica
+ 7) Mostrar estado de ufw
+ 8) Desactivar firewall
+ 9) Reiniciar configuración (ufw reset)
+
+ ---
+
+ ## 🧩 ¿Qué hace exactamente la opción 1?
+
+Cuando seleccionas `1) Inicializar firewall`, el script ejecuta:
+
+```bash
+sudo ufw --force reset
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
+
+Esto realiza **tres acciones clave**:
+
+### 1️⃣ `ufw --force reset`
+
+🔄 **Limpia completamente** todas las reglas actuales del firewall.
+
+- Borra cada puerto permitido o denegado previamente.
+  
+- Elimina cualquier configuración personalizada.
+  
+- Resetea a cero el estado del firewall, **como si lo instalaras de nuevo**.
+  
+
+✅ Útil si has tocado mucho sin entender y sientes que “rompiste algo”.
+
+---
+
+### 2️⃣ `ufw default deny incoming`
+
+🚫 **Bloquea todo el tráfico entrante por defecto**.
+
+- Cierra todos los puertos abiertos **a menos que tú explícitamente los permitas**.
+  
+- Si alguien desde Internet intenta acceder a tu máquina: *no pasa*.
+  
+
+> Ejemplo: si tú no agregas una regla para permitir SSH, nadie podrá hacer `ssh tuusuario@tuIP`.
+
+**Por qué es importante:**  
+Esto crea una **muralla de contención**: tu máquina *no responde a conexiones externas* salvo que tú lo decidas.  
+Evita escaneos automatizados, bots, ataques por puertos abiertos como el 22 (SSH), 139 (Samba), etc.
+
+---
+
+### 3️⃣ `ufw default allow outgoing`
+
+✅ **Permite todo el tráfico saliente por defecto**.
+
+- Puedes seguir usando el navegador, actualizaciones de sistema, curl, etc.
+  
+- Tu máquina puede hablar con el mundo… pero el mundo no puede hablar contigo.
+  
+
+> Esto respeta tu flujo normal de trabajo: navegar, clonar desde GitHub, actualizar, enviar datos a Rclone…
+
+---
+
+## 🎯 ¿Cuándo y por qué usar esta opción?
+
+| Situación | ¿Por qué elegir esta opción? |
+| --- | --- |
+| **Primera vez que usas ufw** | Es el **punto de partida ideal**: eliminas incertidumbre, partes desde lo básico y seguro. |
+| **Sospechas que algo está mal configurado** | Borra todas las reglas anteriores que podrías haber añadido mal. |
+| **Preparas tu máquina para exponer servicios** | Antes de permitir puertos (como 22 o 443), es bueno partir desde un firewall “cerrado por defecto”. |
+| **Pruebas automatizadas de seguridad o scripts** | Te da un entorno limpio y predecible para aplicar nuevas reglas sin arrastre de errores pasados. |
+| **Reinicias políticas tras instalar un servicio nuevo** | Por ejemplo, instalas un servidor Nginx y quieres que solo ese puerto quede abierto. |
+
+---
+
+## 🧠 ¿Qué debes saber antes de usar esta opción?
+
+- Si estás **trabajando de forma remota por SSH**, ejecutar esto sin habilitar SSH inmediatamente después puede desconectarte y dejarte fuera (⚠️ cuidado).
+  
+- No reinicia el estado del sistema (no reinicia el equipo), solo limpia las reglas de UFW.
+  
+- No afecta el firewall de red de tu router, solo el de tu máquina local.
+  
+
+---
+
+## 🛡️ Analogía:
+
+> Es como cerrar **todas las ventanas de tu casa**, y luego ir una por una abriendo solo las que necesitas, en lugar de dejar todas abiertas y esperar que nadie entre.
+
+---
+
