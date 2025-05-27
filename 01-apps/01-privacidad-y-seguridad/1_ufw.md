@@ -119,7 +119,7 @@ SCRIPT [[diegoabeltran16/partitura-linux/02-scripts/01-privacidad-y-seguridad-SC
 
  ## 🧩 ¿Qué hace exactamente la opción 1?
 
-Cuando seleccionas `1) Inicializar firewall`, el script ejecuta:
+[Cuando seleccionas `1) Inicializar firewall`, el script ejecuta:](diegoabeltran16/partitura-linux/02-scripts/01-privacidad-y-seguridad-SCRIPTS/03-UFW-scipts/ufw-manager.sh)
 
 ```bash
 sudo ufw --force reset
