@@ -51,21 +51,20 @@ Cuando los unes, obtenés:
 Debian XFCE usa en promedio **300–500 MB de RAM al iniciar**, ideal para:
 
 - Laptops con 2–4 GB de RAM
-- Chromebooks convertidos (como el tuyo 🥷)
 - Equipos antiguos o sistemas minimalistas
 
 ---
 
 ## 🎨 Estética vs. Velocidad
 
-XFCE sacrifica efectos visuales llamativos a cambio de fluidez. Pero eso no impide que lo decores:
+XFCE sacrifica efectos visuales llamativos a cambio de fluidez. Pero eso no impide que lpueda ser decorado:
 
 - 🌈 Temas tipo macOS como **WhiteSur**
 - 🔲 Docks como `plank`
 - 🧭 Menús modernos (`xfce4-whiskermenu-plugin`)
 - 🔧 Paneles personalizables
 
-Así conseguís belleza y velocidad sin compromisos.
+Así se consigue belleza y velocidad sin compromisos.
 
 ---
 
@@ -121,3 +120,4 @@ Todo es reemplazable por opciones pro como VS Code, Brave, Obsidian, etc.
 > No brilla con efectos… pero nunca falla en combate.
 
 ---
+
