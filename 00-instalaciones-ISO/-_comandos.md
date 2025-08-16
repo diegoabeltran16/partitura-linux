@@ -730,6 +730,99 @@ Quien entiende la red, se mueve sin ser visto.”
 >
 
 ---
+Informacion del computador y de la maquina
+
+### ✅ **1. Información general del sistema operativo y kernel**
+
+```bash
+neofetch
+
+```
+
+> Si no lo tienes instalado:
+> 
+
+```bash
+sudo apt install neofetch && neofetch
+
+```
+
+---
+
+### ✅ **2. Procesador y arquitectura**
+
+```bash
+lscpu | grep -E "Model name|Architecture|CPU(s)|Thread|Core"
+
+```
+
+---
+
+### ✅ **3. RAM física y swap**
+
+```bash
+free -h
+
+```
+
+---
+
+### ✅ **4. Espacio en disco (particiones sin rutas personales)**
+
+```bash
+lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT | grep -Ev 'loop|snap'
+
+```
+
+---
+
+### ✅ **5. Tarjeta gráfica y controlador**
+
+```bash
+lspci | grep -i vga
+
+```
+
+> Opcional:
+> 
+
+```bash
+glxinfo | grep "OpenGL renderer"
+
+```
+
+(Si tienes `mesa-utils` instalado)
+
+---
+
+### ✅ **6. Resolución de pantalla**
+
+```bash
+xdpyinfo | grep dimensions
+
+```
+
+---
+
+### ✅ **7. Información del entorno de escritorio XFCE**
+
+```bash
+echo $XDG_CURRENT_DESKTOP
+
+```
+
+---
+
+### ✅ **8. Sistema de paquetes y entorno base**
+
+```bash
+lsb_release -a
+
+```
+
+> Esto te dice si estás usando Debian 11, 12, etc.
+>
+---
 
 # 🧠 Consejos
 
