@@ -1,4 +1,16 @@
 # 📍 Navegación del sistema de archivos
+
+## 📑 Índice
+- [🧠 Información del sistema](#-información-del-sistema)
+- [🔐 Usuario, permisos y superpoderes](#-usuario-permisos-y-superpoderes)
+- [📁 Archivos y edición](#-archivos-y-edición)
+- [📦 Paquetes y actualizaciones](#-paquetes-y-actualizaciones)
+- [🔄 Procesos y recursos](#-procesos-y-recursos)
+- [🌐 Red y conectividad](#-red-y-conectividad)
+- [🖥️ Información del computador y de la máquina](#️-informacion-del-computador-y-de-la-maquina)
+- [🧠 Consejos](#-consejos)
+- [📜 Nota final](#-nota-final)
+
 ## 🧭 ¿Qué es el sistema de archivos?
 En Linux, **todo es un archivo**: documentos, carpetas, procesos, dispositivos… incluso el hardware se representa como archivos (por ejemplo, `/dev/sda` es tu disco).
 
