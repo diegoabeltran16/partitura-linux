@@ -32,7 +32,7 @@ Conocer esto te permite moverte **con intención** y no al azar.
 
 ## Trucos ninja
 ### Autocompletado:
-Cuando escribís rutas, podés presionar `Tab` para autocompletar nombres.
+Cuando escribes rutas, puedes presionar `Tab` para autocompletar nombres.
 Muy útil para no escribir todo a mano y evitar errores.
 
 ### Ruta absoluta vs. relativa:
@@ -43,7 +43,7 @@ Muy útil para no escribir todo a mano y evitar errores.
 > 
 ---
 
-## 🧩 ¿Y si quiero volver al punto anterior?
+### 🧩 ¿Y si quiero volver al punto anterior?
 
 Podés usar `cd -` para volver al último directorio en el que estuviste.
 
@@ -55,7 +55,7 @@ cd -      # Te lleva de nuevo a /etc
 
 ---
 
-## 🧘‍♂️ Reflexión final
+### 🧘‍♂️ Reflexión final
 
 > “El sistema de archivos no es solo estructura... es reflejo del orden mental del programador.”
 > 
@@ -65,7 +65,7 @@ cd -      # Te lleva de nuevo a /etc
 > Y cada paso, cada `cd`, es una decisión consciente.
 >
 
-## 🛤️ Movimiento
+### 🛤️ Movimiento
 
 - **`cd`** es tu técnica de desplazamiento: no caminas, *te teletransportás* a otro punto del sistema.
 - **`pwd`** te revela el lugar donde estás. Es como mirar tu GPS ninja.
@@ -76,7 +76,7 @@ cd -      # Te lleva de nuevo a /etc
 
 ---
 
-## 🔍 `pwd` – **Muestra la ruta del directorio actual**
+### 🔍 `pwd` – **Muestra la ruta del directorio actual**
 
 ```bash
 pwd
@@ -90,7 +90,7 @@ Te dice en qué parte del sistema estás parado.
 
 ---
 
-## 📂 `ls` – **Lista archivos**
+### 📂 `ls` – **Lista archivos**
 
 ```bash
 ls
@@ -103,7 +103,7 @@ Sin opciones, solo muestra los nombres. Muy útil para tener un vistazo rápido.
 
 ---
 
-## 📊 `ls -l` – **Lista con detalles (permisos, tamaño, fechas)**
+### 📊 `ls -l` – **Lista con detalles (permisos, tamaño, fechas)**
 
 ```bash
 ls -l
@@ -120,7 +120,7 @@ ls -l
 
 ---
 
-## 📁 `cd nombre/` – **Entra a una carpeta**
+### 📁 `cd nombre/` – **Entra a una carpeta**
 
 ```bash
 cd nombre/
@@ -133,7 +133,7 @@ Te mueve dentro de una carpeta específica.
 
 ---
 
-## ⬆️ `cd ..` – **Sube un nivel**
+### ⬆️ `cd ..` – **Sube un nivel**
 
 ```bash
 cd ..
@@ -145,7 +145,7 @@ cd ..
 
 ---
 
-## 🏠 `cd` – **Ir al directorio home**
+### 🏠 `cd` – **Ir al directorio home**
 
 ```bash
 cd
@@ -157,7 +157,7 @@ cd
 
 ---
 
-## 🌲 `tree` – **Muestra estructura de carpetas en forma de árbol**
+### 🌲 `tree` – **Muestra estructura de carpetas en forma de árbol**
 
 ```bash
 tree
@@ -170,7 +170,7 @@ Muestra jerárquicamente las carpetas y subcarpetas.
 
 ---
 
-# 🧠 Información del sistema
+## 🧠 Información del sistema
 
 Conocer el estado de tu sistema es tan importante como dominar el entorno en una misión.
 
@@ -178,7 +178,7 @@ Estos comandos te permiten hacer un **diagnóstico rápido y efectivo** del ento
 
 ---
 
-## 👤 `whoami` – **Tu nombre de usuario actual**
+### 👤 `whoami` – **Tu nombre de usuario actual**
 
 ```bash
 whoami
@@ -191,7 +191,7 @@ whoami
 
 ---
 
-## 🧬 `uname -a` – **Info del kernel y arquitectura**
+### 🧬 `uname -a` – **Info del kernel y arquitectura**
 ```bash
 uname -a
 ```
@@ -205,7 +205,7 @@ uname -a
 
 ---
 
-## 🖥️ `hostname` – **Nombre del equipo**
+### 🖥️ `hostname` – **Nombre del equipo**
 
 ```bash
 hostname
@@ -218,7 +218,7 @@ hostname
 
 ---
 
-## ⏱️ `uptime` – **Tiempo encendido**
+### ⏱️ `uptime` – **Tiempo encendido**
 
 ```bash
 uptime
@@ -230,7 +230,7 @@ uptime
 
 ---
 
-## 💾 `df -h` – **Espacio en disco**
+### 💾 `df -h` – **Espacio en disco**
 ```bash
 df -h
 ```
@@ -242,7 +242,7 @@ Muestra cuánto espacio hay disponible y cuánto está ocupado en cada partició
 
 ---
 
-## 🧠 `free -h` – **Memoria disponible**
+### 🧠 `free -h` – **Memoria disponible**
 
 ```bash
 free -h
@@ -254,7 +254,7 @@ free -h
 
 ---
 
-## ⚙️ `lscpu` – **Info del procesador**
+### ⚙️ `lscpu` – **Info del procesador**
 
 ```bash
 lscpu
@@ -266,7 +266,7 @@ lscpu
 
 ---
 
-## 📦 `lsblk` – **Dispositivos de almacenamiento**
+### 📦 `lsblk` – **Dispositivos de almacenamiento**
 
 ```bash
 lsblk
@@ -278,7 +278,7 @@ lsblk
 
 ---
 
-# 🔐 Usuario, permisos y superpoderes
+## 🔐 Usuario, permisos y superpoderes
 
 En Linux, **todo está gobernado por usuarios y permisos**.
 No hay GUI ni efecto visual que te salve si no sabés cómo funciona el sistema de privilegios.
@@ -286,7 +286,7 @@ Cada acción está atada a una identidad, y cada identidad tiene un rango de pod
 
 ---
 
-## 🆔 `id` – **Muestra tu UID y grupos**
+### 🆔 `id` – **Muestra tu UID y grupos**
 
 ```bash
 id
@@ -298,7 +298,7 @@ id
 
 ---
 
-## 🧪 `groups` – **A qué grupos pertenecés**
+### 🧪 `groups` – **A qué grupos pertenecés**
 
 ```bash
 groups
@@ -310,7 +310,7 @@ groups
 
 ---
 
-## 🔑 `sudo comando` – **Ejecutar con privilegios**
+### 🔑 `sudo comando` – **Ejecutar con privilegios**
 
 ```bash
 sudo comando
@@ -323,7 +323,7 @@ sudo comando
 
 ---
 
-## 🔐 `passwd` – **Cambiar tu contraseña**
+### 🔐 `passwd` – **Cambiar tu contraseña**
 
 ```bash
 passwd
@@ -335,7 +335,7 @@ passwd
 
 ---
 
-## ⚔️ `chmod +x archivo.sh` – **Hacer ejecutable un script**
+### ⚔️ `chmod +x archivo.sh` – **Hacer ejecutable un script**
 ```bash
 chmod +x archivo.sh
 ```
@@ -347,7 +347,7 @@ chmod +x archivo.sh
 
 ---
 
-### 🧘‍♂️ Reflexión táctica:
+## 🧘‍♂️ Reflexión táctica:
 
 El sistema de permisos en Linux tiene tres niveles:
 🔹 **Usuario** (u)
@@ -367,16 +367,16 @@ Cada archivo tiene una “matriz” de protección que se ve con `ls -l`:
 > 
 
 ---
-# 📁 Archivos y edición
+## 📁 Archivos y edición
 
-## 🧱 Fundamentos
+### 🧱 Fundamentos
 
 En Linux, los archivos son **el corazón del sistema**: todo es un archivo, desde configuraciones hasta procesos.
 Saber crearlos, moverlos o destruirlos es parte de tu entrenamiento esencial.
 
 ---
 
-## 📖 `cat archivo.txt` – **Ver contenido**
+### 📖 `cat archivo.txt` – **Ver contenido**
 
 ```bash
 cat archivo.txt
@@ -389,7 +389,7 @@ cat archivo.txt
 
 ---
 
-## 📝 `nano archivo.txt` – **Editar en modo terminal**
+### 📝 `nano archivo.txt` – **Editar en modo terminal**
 
 ```bash
 nano archivo.txt
@@ -403,7 +403,7 @@ nano archivo.txt
 
 ---
 
-## 🧬 `cp origen destino` – **Copiar archivo o carpeta**
+### 🧬 `cp origen destino` – **Copiar archivo o carpeta**
 
 ```bash
 cp archivo.txt copia.txt
@@ -417,7 +417,7 @@ cp -r carpeta1/ carpeta2/
 
 ---
 
-## 🎭 `mv origen destino` – **Mover o renombrar**
+### 🎭 `mv origen destino` – **Mover o renombrar**
 
 ```bash
 mv archivo.txt /otra/ruta/
@@ -431,7 +431,7 @@ mv viejo.txt nuevo.txt
 
 ---
 
-## ☠️ `rm archivo.txt` – **Eliminar archivo**
+### ☠️ `rm archivo.txt` – **Eliminar archivo**
 
 ```bash
 rm archivo.txt
@@ -445,7 +445,7 @@ rm -r carpeta/
 
 ---
 
-## 🏗️ `mkdir nueva/` – **Crear carpeta**
+### 🏗️ `mkdir nueva/` – **Crear carpeta**
 
 ```bash
 mkdir nueva/
@@ -458,7 +458,7 @@ mkdir nueva/
 
 ---
 
-## ✨ `touch nuevo.txt` – **Crear archivo vacío**
+### ✨ `touch nuevo.txt` – **Crear archivo vacío**
 
 ```bash
 touch nuevo.txt
@@ -487,12 +487,12 @@ nano pergamino.txt
 > 
 
 ---
-# 📦 Paquetes y actualizaciones
+## 📦 Paquetes y actualizaciones
 
 > 🧠 Un sistema sin actualizaciones es como una katana sin afilar.
 > 
 
-## 📦 ¿Qué son los paquetes?
+### 📦 ¿Qué son los paquetes?
 
 Un **paquete** es como una caja que contiene software.
 Dentro puede haber:
@@ -543,7 +543,7 @@ No necesitás un “Windows Update” con reinicios infinitos.
 | `apt upgrade` | Entrena las técnicas | Actualiza lo que ya tenés |
 ---
 
-## 🔄 `sudo apt update` – **Actualizar lista de paquetes**
+### 🔄 `sudo apt update` – **Actualizar lista de paquetes**
 
 ```bash
 sudo apt update
@@ -555,7 +555,7 @@ sudo apt update
 
 ---
 
-## 🧪 `sudo apt upgrade` – **Actualizar los paquetes instalados**
+### 🧪 `sudo apt upgrade` – **Actualizar los paquetes instalados**
 
 ```bash
 sudo apt upgrade
@@ -568,7 +568,7 @@ sudo apt upgrade
 
 ---
 
-## 🛠️ `sudo apt install nombre` – **Instalar un paquete**
+### 🛠️ `sudo apt install nombre` – **Instalar un paquete**
 
 ```bash
 sudo apt install nombre
@@ -580,7 +580,7 @@ sudo apt install nombre
 
 ---
 
-## 🧹 `sudo apt remove nombre` – **Eliminar un paquete**
+### 🧹 `sudo apt remove nombre` – **Eliminar un paquete**
 
 ```bash
 sudo apt remove nombre
@@ -593,12 +593,12 @@ sudo apt remove nombre
 
 ---
 
-# 🔄 Procesos y recursos
+## 🔄 Procesos y recursos
 
 > Un ninja no solo observa el sistema… lo escucha, lo siente, lo vigila desde dentro.
 > 
 
-## 🔄 ¿Qué son los procesos?
+### 🔄 ¿Qué son los procesos?
 
 Un **proceso** es un programa en ejecución.
 Por ejemplo:
@@ -607,7 +607,7 @@ Por ejemplo:
 - Incluso cosas invisibles (como el servidor de red) son procesos
 
 Podés verlos con:
-## 👁️ `ps aux` – **Listar procesos en ejecución**
+### 👁️ `ps aux` – **Listar procesos en ejecución**
 
 ```bash
 ps aux
@@ -620,7 +620,7 @@ ps aux
 
 ---
 
-## 🌡️ `top` – **Vista en tiempo real del sistema**
+### 🌡️ `top` – **Vista en tiempo real del sistema**
 
 ```bash
 top
@@ -633,7 +633,7 @@ top
 
 ---
 
-## ☠️ `kill PID` – **Terminar proceso**
+### ☠️ `kill PID` – **Terminar proceso**
 
 ```bash
 kill 1234
@@ -657,11 +657,11 @@ kill PID
 >
 ---
 
-# 🌐 Red y conectividad
+## 🌐 Red y conectividad
 
 En Linux, entender la red es como leer el viento en el campo de batalla: **sutil, constante y vital**.
 
-## 📡 `ip a` – **Ver interfaces de red**
+### 📡 `ip a` – **Ver interfaces de red**
 
 ```bash
 ip a
@@ -682,7 +682,7 @@ ip a
 
 ---
 
-## 📶 `ping` – **Probar conexión a internet**
+### 📶 `ping` – **Probar conexión a internet**
 
 ```bash
 ping google.com
@@ -702,7 +702,7 @@ ping google.com
 
 ---
 
-## 🌍 `curl ifconfig.me` – **Ver tu IP pública**
+### 🌍 `curl ifconfig.me` – **Ver tu IP pública**
 
 ```bash
 curl ifconfig.me
@@ -717,7 +717,7 @@ curl ifconfig.me
 
 ---
 
-## 🧠 Extra ninja tips
+### 🧠 Extra ninja tips
 
 - Usá `ping 8.8.8.8` si querés saber si falla **la red o el DNS**.
 - Usá `ip r` para ver tu **ruta de salida (gateway)**.
@@ -824,7 +824,7 @@ lsb_release -a
 >
 ---
 
-# 🧠 Consejos
+## 🧠 Consejos
 
 - Usá `man comando` para ver el manual de cualquier herramienta
 - Agregá alias personalizados en tu `.bashrc` para comandos largos
@@ -832,7 +832,7 @@ lsb_release -a
 
 ---
 
-# 📜 Nota final
+## 📜 Nota final
 
 > *“Saber moverse en la terminal es como saber respirar bajo el agua.”*  
 > Dominar estos comandos te hará operar con precisión, incluso sin entorno gráfico.
