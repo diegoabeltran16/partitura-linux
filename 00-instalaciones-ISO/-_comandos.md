@@ -193,7 +193,7 @@ Estos comandos te permiten hacer un **diagnóstico rápido y efectivo** del ento
 ### 👤 `whoami` – **Tu nombre de usuario actual**
 
 ```bash
-whoami
+      whoami
 ```
 
 📎 Devuelve el nombre del usuario activo que ejecuta la terminal.
@@ -287,6 +287,19 @@ lsblk
 🔸 Fundamental antes de instalar Ventoy, montar un USB, o identificar una unidad externa.
 > 🗺️ Todo ninja debe conocer los caminos del pergamino que porta.
 > 
+
+### Informacion segura para compartir sobre la informacion del sistema
+
+Usamos echo con el fin de imprimir un titulo en cada orden 
+```bash
+echo "== Kernel y arquitectura ==" && uname -srmo && \
+echo "== Tiempo encendido ==" && uptime && \
+echo "== Espacio en disco ==" && df -h --output=source,size,used,avail,pcent,target | grep -E "^/dev" && \
+echo "== Memoria disponible ==" && free -h && \
+echo "== CPU ==" && lscpu | grep -E 'Arquitectura|CPU\(s\)|Modelo|MHz|max|min|Núcleo'
+```
+
+
 
 ---
 
